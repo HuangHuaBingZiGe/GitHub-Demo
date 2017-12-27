@@ -2,64 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0999ba-a1a6-4b95-a5bb-71aac49d5f1c" name="Default" comment="20171227">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/Idea_Instructions.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/PEP8.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/Python_Instructions.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/The_Zen_of_Python.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/excel_deal_with/a.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/excel_deal_with/b.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/excel_deal_with/c.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/count_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/dir_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/format_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/help_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/import_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/import_single_line_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/import_sys_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/join_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/math_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/open_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/postBody_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/print_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/range_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/sort_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/split_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/function_demo/string_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/copy_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/datetime_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/functools_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/future_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/hashlib_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/json_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/logging_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/math_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/multiprocessing_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/mysql_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/openpyxl_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/os_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/package_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/requests_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/sys_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/time_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/module_demo/xlrd_module.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/_&amp;__&amp;__xx__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/_args&amp;__kwargs.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec10.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec3.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec4.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec5.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec6.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec7.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec8.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec9.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/decorator_demo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/decorator/decorator_function.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/functools_wraps&amp;logging_getLogger.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/my_function_demo/swap_values.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_code/python_using_tips/range&amp;xrange.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VERSION" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python/module_demo/xlrd_module.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/Idea_Instructions.txt" afterPath="$PROJECT_DIR$/docs/python/Idea_Instructions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/PEP8.txt" afterPath="$PROJECT_DIR$/docs/python/PEP8.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/Python_Instructions.txt" afterPath="$PROJECT_DIR$/docs/python/Python_Instructions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/The_Zen_of_Python.txt" afterPath="$PROJECT_DIR$/docs/python/The_Zen_of_Python.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/excel_deal_with/a.py" afterPath="$PROJECT_DIR$/src/python/excel_deal_with/a.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/excel_deal_with/b.py" afterPath="$PROJECT_DIR$/src/python/excel_deal_with/b.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/excel_deal_with/c.py" afterPath="$PROJECT_DIR$/src/python/excel_deal_with/c.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/count_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/count_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/dir_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/dir_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/format_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/format_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/help_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/help_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/import_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/import_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/import_single_line_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/import_single_line_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/import_sys_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/import_sys_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/join_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/join_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/math_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/math_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/open_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/open_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/postBody_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/postBody_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/print_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/print_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/range_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/range_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/sort_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/sort_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/split_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/split_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/string_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/string_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/copy_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/copy_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/datetime_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/datetime_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/functools_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/functools_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/future_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/future_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/hashlib_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/hashlib_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/json_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/json_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/logging_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/logging_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/math_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/math_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/multiprocessing_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/multiprocessing_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/mysql_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/mysql_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/openpyxl_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/openpyxl_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/os_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/os_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/package_function.py" afterPath="$PROJECT_DIR$/src/python/module_demo/package_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/requests_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/requests_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/sys_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/sys_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/time_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/time_module.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/xlrd_module.py" afterPath="$PROJECT_DIR$/AUTHORS" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/_&amp;__&amp;__xx__.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/_&amp;__&amp;__xx__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/_args&amp;__kwargs.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/_args&amp;__kwargs.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec1.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec10.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec10.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec2.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec3.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec3.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec4.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec4.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec5.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec5.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec6.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec6.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec7.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec7.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec8.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec8.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec9.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec9.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/decorator_demo.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/decorator_demo.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/decorator_function.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/decorator_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/functools_wraps&amp;logging_getLogger.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/functools_wraps&amp;logging_getLogger.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/swap_values.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/swap_values.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/python_using_tips/range&amp;xrange.py" afterPath="$PROJECT_DIR$/src/python/python_using_tips/range&amp;xrange.py" />
     </list>
     <ignored path="git_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -158,7 +165,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="python_code" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -168,10 +179,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\学习文档\python\GitHub-Demo\src\python" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -446,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514372910431</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="20171227">
+      <created>1514372970590</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1514372970590</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -533,6 +556,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-975">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/python/excel_deal_with/a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
