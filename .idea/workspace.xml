@@ -2,71 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0999ba-a1a6-4b95-a5bb-71aac49d5f1c" name="Default" comment="20171227">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FAQ.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python/module_demo/xlrd_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Idea_Instructions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/PEP8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Python_Instructions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/The_Zen_of_Python.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/excel_deal_with/a.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/excel_deal_with/b.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/excel_deal_with/c.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/count_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/dir_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/format_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/help_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/import_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/import_single_line_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/import_sys_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/join_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/math_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/open_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/postBody_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/print_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/range_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/sort_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/split_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/function_demo/string_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/copy_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/datetime_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/functools_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/future_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/hashlib_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/json_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/logging_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/math_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/multiprocessing_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/mysql_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/openpyxl_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/os_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/package_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/requests_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/sys_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/time_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/module_demo/xlrd_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/_&amp;__&amp;__xx__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/_args&amp;__kwargs.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec10.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec4.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec5.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec6.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec7.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec8.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/dec9.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/decorator_demo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/decorator/decorator_function.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/functools_wraps&amp;logging_getLogger.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/my_function_demo/swap_values.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python_using_tips/range&amp;xrange.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/python/Idea_Instructions.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/python/PEP8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/python/Python_Instructions.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/python/The_Zen_of_Python.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/excel_deal_with/a.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/excel_deal_with/b.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/excel_deal_with/c.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/count_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/dir_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/format_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/help_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/import_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/import_single_line_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/import_sys_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/join_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/math_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/open_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/postBody_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/print_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/range_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/sort_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/split_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/function_demo/string_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/copy_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/datetime_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/functools_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/future_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/hashlib_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/json_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/logging_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/math_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/multiprocessing_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/mysql_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/openpyxl_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/os_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/package_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/requests_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/sys_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/time_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/module_demo/xlrd_module.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/_&amp;__&amp;__xx__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/_args&amp;__kwargs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec10.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec3.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec4.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec5.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec6.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec7.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec8.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec9.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/decorator_demo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/decorator/decorator_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/functools_wraps&amp;logging_getLogger.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/my_function_demo/swap_values.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/python/python_using_tips/range&amp;xrange.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/Idea_Instructions.txt" afterPath="$PROJECT_DIR$/docs/python/Idea_Instructions.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/PEP8.txt" afterPath="$PROJECT_DIR$/docs/python/PEP8.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/Python_Instructions.txt" afterPath="$PROJECT_DIR$/docs/python/Python_Instructions.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/The_Zen_of_Python.txt" afterPath="$PROJECT_DIR$/docs/python/The_Zen_of_Python.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/excel_deal_with/a.py" afterPath="$PROJECT_DIR$/src/python/excel_deal_with/a.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/excel_deal_with/b.py" afterPath="$PROJECT_DIR$/src/python/excel_deal_with/b.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/excel_deal_with/c.py" afterPath="$PROJECT_DIR$/src/python/excel_deal_with/c.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/count_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/count_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/dir_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/dir_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/format_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/format_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/help_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/help_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/import_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/import_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/import_single_line_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/import_single_line_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/import_sys_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/import_sys_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/join_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/join_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/math_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/math_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/open_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/open_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/postBody_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/postBody_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/print_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/print_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/range_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/range_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/sort_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/sort_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/split_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/split_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/function_demo/string_function.py" afterPath="$PROJECT_DIR$/src/python/function_demo/string_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/copy_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/copy_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/datetime_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/datetime_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/functools_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/functools_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/future_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/future_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/hashlib_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/hashlib_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/json_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/json_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/logging_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/logging_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/math_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/math_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/multiprocessing_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/multiprocessing_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/mysql_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/mysql_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/openpyxl_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/openpyxl_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/os_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/os_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/package_function.py" afterPath="$PROJECT_DIR$/src/python/module_demo/package_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/requests_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/requests_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/sys_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/sys_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/time_module.py" afterPath="$PROJECT_DIR$/src/python/module_demo/time_module.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/module_demo/xlrd_module.py" afterPath="$PROJECT_DIR$/AUTHORS" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/_&amp;__&amp;__xx__.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/_&amp;__&amp;__xx__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/_args&amp;__kwargs.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/_args&amp;__kwargs.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec1.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec1.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec10.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec10.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec2.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec2.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec3.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec3.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec4.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec4.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec5.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec5.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec6.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec6.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec7.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec7.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec8.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec8.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/dec9.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/dec9.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/decorator_demo.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/decorator_demo.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/decorator/decorator_function.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/decorator/decorator_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/functools_wraps&amp;logging_getLogger.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/functools_wraps&amp;logging_getLogger.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/my_function_demo/swap_values.py" afterPath="$PROJECT_DIR$/src/python/my_function_demo/swap_values.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python_code/python_using_tips/range&amp;xrange.py" afterPath="$PROJECT_DIR$/src/python/python_using_tips/range&amp;xrange.py" />
     </list>
     <ignored path="git_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,6 +129,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/GitHub-Demo$range_xrange.coverage" NAME="range&amp;xrange Coverage Results" MODIFIED="1514374123649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python/python_using_tips" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -96,6 +151,7 @@
       <list>
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/python/python_using_tips/range&amp;xrange.py" />
       </list>
     </option>
   </component>
@@ -136,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -168,14 +225,37 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="python" />
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,7 +269,25 @@
       <recent name="E:\学习文档\python\GitHub-Demo\src\python" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.range&amp;xrange">
+    <configuration default="false" name="range&amp;xrange" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/python/python_using_tips" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="git_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/python/python_using_tips/range&amp;xrange.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -398,6 +496,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.range&amp;xrange" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.range&amp;xrange" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -469,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514372970590</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="20171227">
+      <created>1514374080947</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1514374080947</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -485,11 +598,10 @@
     <frame x="-8" y="-8" width="1307" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35076427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35720032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.49718422" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5028158" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.49396622" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.49718422" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -499,8 +611,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -563,7 +676,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/python/python_using_tips/range&amp;xrange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
         </state>
       </provider>
     </entry>

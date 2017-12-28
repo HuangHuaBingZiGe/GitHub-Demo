@@ -15,5 +15,7 @@ for i in range(6):
     print(i ** 2)
 
 print("-----更好的方法，使用xrange-----")
+'''
 for i in xrange(6):
     print(i ** 2)
+'''
