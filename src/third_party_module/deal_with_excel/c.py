@@ -10,7 +10,7 @@
         xlwt主要是用来写excel文件
     xlutils
         xlutils结合xlrd可以达到修改excel文件目的
-    excel_deal_with
+    deal_with_excel
         openpyxl可以对excel文件进行读写操作
     xlsxwriter
         xlsxwriter可以写excel文件并加上图表
