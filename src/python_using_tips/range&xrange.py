@@ -110,7 +110,10 @@ print("iter接受2个参数，第1个是反复调用的函数，第2个是标记
 print("这个方法的优势在于iter的返回值是个迭代器，迭代器可以用在各种地方，set、sorted、min、max、heapq、sum.....")
 blocks = []
 f = open(file_name, "r+")
-for block in iter(partial(f.read, 9), ''):
+print("iter的第一个参数必须是一个可调用对象，不能带括号的函数，应该一个去掉括号的带返回值的函数，当返回的值为空时，跳出循环")
+print("partial的第一个参数也必须是一个可调用对象，对于读取的对象，5个字节读取一次，当读取的为空时，自动跳出")
+print(type(f.read))
+for block in iter(partial(f.read, 5), ''):
     blocks.append(block)
 print(blocks)
 f.close()
