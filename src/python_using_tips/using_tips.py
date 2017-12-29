@@ -117,3 +117,43 @@ for block in iter(partial(f.read, 5), ''):
     blocks.append(block)
 print(blocks)
 f.close()
+
+print("-----在循环内识别多个退出点-----")
+
+
+def find(seq, target):
+    found = False
+    print("当前查找所在的序列为：")
+    print(seq)
+    print("要查找的为：")
+    print(target)
+    for i, value in enumerate(seq):
+        if value == target:
+            found = True
+            break
+    if not found:
+        return -1
+    return i
+
+
+pos = find(['a', 'b', 'c'], 'b')
+print("查找到的节点的位置为：")
+print(pos)
+
+print("-----在循环内识别多个退出点，更好的方法-----")
+print("for执行完所有的循环后就会执行else")
+print("for-else用法：当for的判断当中没有break出去的时候，所有循环都走完，执行else中的情况；如果在for当中break出去了，不执行else")
+
+
+def find(seq, target):
+    for i, value in enumerate(seq):
+        if value == target:
+            break
+    else:
+        print("没有break")
+        return -1
+    return i
+
+
+pos = find(['a', 'b', 'c'], 'b')
+print(pos)
