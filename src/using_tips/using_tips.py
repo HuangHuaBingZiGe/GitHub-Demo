@@ -146,6 +146,10 @@ print("for-else用法：当for的判断当中没有break出去的时候，所有
 
 
 def find(seq, target):
+    print("当前查找所在的序列为：")
+    print(seq)
+    print("要查找的目标为：")
+    print(target)
     for i, value in enumerate(seq):
         if value == target:
             break
@@ -156,4 +160,5 @@ def find(seq, target):
 
 
 pos = find(['a', 'b', 'c'], 'b')
+print("查找到的节点位置为：")
 print(pos)
