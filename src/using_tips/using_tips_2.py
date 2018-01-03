@@ -125,11 +125,11 @@ for row in reader:
 '''
 file = 'test.csv'
 file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
-            '\\' + 'csv' +  '\\' + file
+            '\\' + 'docs' + '\\' + 'csv' +  '\\' + file
 
 file_copy = 'pingan_copy.csv'
 file_name_copy = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
-            '\\' + 'csv' +  '\\' + file_copy
+            '\\' + 'docs' + '\\' + 'csv' +  '\\' + file_copy
 
 with open(file_name,"rt",encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
@@ -147,7 +147,7 @@ print("python2和python3的csv.reader.next的方法有所区别")
 
 file_copy_2 = 'pingan2.csv'
 file_name_copy2 = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
-            '\\' + 'csv' +  '\\' + file_copy_2
+            '\\' + 'docs' + '\\' + 'csv' +  '\\' + file_copy_2
 
 with open(file_name,'r') as rf:
     reader = csv.reader(rf)
@@ -235,7 +235,7 @@ print(type(d2))
 '''
 file = 'demo.json'
 file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
-            '\\' + 'json' +  '\\' + file
+            '\\' + 'docs' + '\\' + 'json' +  '\\' + file
 
 l = [1,2,'abc',{'name': 'Bob','age':13}]
 
@@ -243,3 +243,266 @@ l = [1,2,'abc',{'name': 'Bob','age':13}]
 with open(file_name,'w') as f:
     json.dump(l,f)
 '''
+
+'''
+6-3 如何解析简单的xml文档
+
+实际案例：
+    xml是一种十分常用的标记性语言，可提供统一的方法来描述应用程序的结构化数据：
+    
+<?xml version="1.0"?>
+<data>
+    <country name="Liechtenstein">
+        <rank updated="yes">2</rank>
+        <year>2008</year>
+        <gdppc>141100</gdppc>
+        <neighbor name="Austria" direction="E"/>
+        <neighbor name="Switzerland" direction="W"/>
+    </country>
+</data>
+
+python中如何解析xml文档？
+
+解决方案：
+    使用标准库中的xml.etree.ElementTree,其中的parse函数可以解析xml文档
+    
+
+from xml.etree.ElementTree import parse
+import os
+
+file = 'demo.xml'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'docs' + '\\' + 'xml' +  '\\' + file
+
+f = open(file_name)
+et = parse(f)
+print(et)
+root = et.getroot()
+print(root)
+print(root.tag)
+print(root.attrib)
+print(root.text)
+print(root.text.strip())
+print(root.getchildren())
+for child in root:
+    print(child.get('name'))
+print(root.find('country'))
+print(root.findall('country'))
+print(root.iterfind('country'))
+for e in root.iterfind('country'):
+    print(e.get('name'))
+print(root.findall('rank')) # 找不到非子元素
+print(root.iter())
+print(list(root.iter()))
+print(list(root.iter('rank')))
+print(root.findall('country/*')) # *表示匹配孙子节点
+print(root.findall('rank')) # 直接查找子元素
+print(root.findall('.//rank')) # //表示查找所有层次
+print(root.findall('.//rank/..')) # ..表示查找rank的所有父节点
+print(root.findall('country[@name]')) # 查找包含name属性的country
+print(root.findall('country[@name="Singapore"]'))#查找属性等于特定值的
+print(root.findall('country[rank]'))# 查找包含rank的country
+print(root.findall('country[rank="5"]'))
+print(root.findall('country[1]')) #查找序号为1的country
+print(root.findall('country[2]'))
+print(root.findall('country[last()]')) #找最后一个country标签
+print(root.findall('country[last()-1]')) #找倒数第二个
+
+'''
+
+'''
+6-4 如何构建xml文档
+
+实际案例：
+    某些时候，我们需要将其他格式数据转换为xml
+    例如，我们要把平安股票csv文件，转换成相应的xml,
+
+test.csv
+Date,Open,High,Low,Close,Volume,Adj Close
+2016/6/1,8.69,8.74,8.66,8.7,36220400,8.7
+
+pingan.xml
+<Data>
+    <Row>
+        <Date>2016-07-05</Date>
+        <Open>8.80</Open>
+        <High>8.83</High>
+        <Low>8.77</Low>
+        <Close>8.81</Close>
+        <Volume>42203700</Volume>
+        <AdjClose>8.81</AdjClose>
+    </Row>
+</Data>
+
+解决方案：
+    使用标准库中的xml.etree.ElementTree，构建ElementTree，使用write方法写入文件
+
+
+from xml.etree.ElementTree import Element,ElementTree
+
+e = Element('Data') # tag名字 Data 创建元素
+print(e.tag)
+print(e.set('name','abc')) # 设置Data的属性
+
+from xml.etree.ElementTree import tostring
+
+print(tostring(e))
+
+e.text='123'
+print(tostring(e))
+
+e2 = Element('Row') #创建子元素
+e3 = Element('Open')
+e3.text='8.80'
+e2.append(e3)
+print(tostring(e2))
+
+e.text = None
+e.append(e2)
+print(tostring(e))
+
+import os
+file = 'demo1.xml'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'docs' + '\\' + 'xml' +  '\\' + file
+
+et = ElementTree(e)
+et.write(file_name)
+
+'''
+
+'''
+import csv
+from xml.etree.cElementTree import Element,ElementTree
+import os
+
+file = 'pingan.csv'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'docs' + '\\' + 'csv' +  '\\' + file
+
+file1 = 'pingan.xml'
+file_name1 = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'docs' + '\\' + 'xml' +  '\\' + file1
+
+def xml_pretty(e,level=0):
+    if len(e) > 0:
+        e.text = '\n' + '\t' * (level + 1)
+        for child in e:
+            xml_pretty(child,level + 1)
+        child.tail = child.tail[:-1]
+    e.tail = '\n' + '\t' * level
+
+def csvToXml(fname):
+    with open(fname,'r') as f:
+        reader = csv.reader(f)
+        headers = next(reader)
+        
+        root = Element('Data')
+        for row in reader:
+            eRow = Element('Row')
+            root.append(eRow)
+            for tag,text in zip(headers,row):
+                e = Element(tag)
+                e.text = text
+                eRow.append(e)
+    
+    xml_pretty(root)
+    return ElementTree(root)
+        
+et = csvToXml(file_name)
+et.write(file_name1)
+
+'''
+
+'''
+6-5 如何读写excel文件
+
+实际案例：
+    Microsoft Excel是日常办公中使用最频繁的软件，其数据格式为xls、xlsx，一种非常常用的电子表格，小学某班成绩，记录在excel文件中
+    
+姓名      语文      数学      外语
+李雷      95         99       96
+韩梅      98         100      93
+张峰      94         95       95
+
+利用python读写excel，添加“总分”列，计算每人的总分
+
+解决方案：
+    使用pip安装， $ pip install xlrd xlwt
+    使用第三方库xlrd和xlwt，这两个库分别用于excel读和写
+'''
+
+'''
+import xlrd
+import os
+
+file = 'sum_point.xlsx'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'docs' + '\\' + 'excel' +  '\\' + file
+
+book = xlrd.open_workbook(file_name)
+print(book.sheets())
+sheet = book.sheet_by_index(0)
+print(sheet.nrows)
+print(sheet.ncols)
+
+cell = sheet.cell(0,0)
+print(cell)
+
+# cell.ctype 是枚举值  xlrd.XL...
+print(type(cell.value))
+print(cell.value)
+
+cell2 = sheet.cell(1,1)
+print(cell2)
+print(type(cell2))
+print(cell2.ctype)
+
+print(sheet.row(1))
+print(sheet.row_values(1))
+print(sheet.row_values(1,1)) # 跳过第一个,第2个1表示从第一个开始
+
+# sheet.put_cell  为表添加1个单元格
+
+
+import xlwt
+
+wbook  = xlwt.Workbook()
+wsheet = wbook.add_sheet('sheet1')
+# wsheet.write
+# wbook.save('output.xlsx')
+
+'''
+
+import os
+
+import xlrd
+import xlwt
+
+file = 'sum_point.xlsx'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'docs' + '\\' + 'excel' + '\\' + file
+
+file1 = 'sum_point_copy.xlsx'
+file_name1 = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+             '\\' + 'docs' + '\\' + 'excel' + '\\' + file1
+
+rbook = xlrd.open_workbook(file_name)
+rsheet = rbook.sheet_by_index(0)
+
+nc = rsheet.ncols
+rsheet.put_cell(0, nc, xlrd.XL_CELL_TEXT, u'总分', None)  # 添加总分的文字，第0行，第rsheet.ncols列，类型，文本
+
+for row in range(1, rsheet.nrows):  # 第1行开始，跳过第0列
+    t = sum(rsheet.row_values(row, 1))
+    rsheet.put_cell(row, nc, xlrd.XL_CELL_NUMBER, t, None)
+
+wbook = xlwt.Workbook()
+wsheet = wbook.add_sheet(rsheet.name)
+style = xlwt.easyxf('align:vertical center,horizontal center')
+
+for r in range(rsheet.nrows):
+    for c in range(rsheet.ncols):
+        wsheet.write(r, c, rsheet.cell_value(r, c), style)
+
+wbook.save(u'output.xlsx')
