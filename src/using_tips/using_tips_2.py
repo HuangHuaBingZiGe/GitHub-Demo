@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+
 """
 
 50个话题
@@ -88,7 +90,7 @@
 """
 
 """
-如何读取csv数据？
+6-1 如何读写csv数据
 
 实际案例：
 http://table.finance.yahoo.com/table.csv?s=000001.sz我们可以通过雅虎网站获取了中国股市（深市）数据集，它以csv数据格式存储:
@@ -104,3 +106,140 @@ Date,Open,High,Low,Close,Volume,Adj Close
 使用标准库中的csv模块，可以使用其中reader和writer完成csv文件读写
 
 """
+'''
+urllib.request.urlretrieve("http://table.finance.yahoo.com/table.csv?s=000001.sz",'pingan.csv')
+
+cat pingan.csv | less
+'''
+
+"""
+# 使用二进制打开
+# 有问题，其实csv文件不是二进制文件
+rf = open(file_name,'rb')
+reader = csv.reader(rf)
+print(reader)
+for row in reader:
+    print(row)
+"""
+
+'''
+file = 'test.csv'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'csv' +  '\\' + file
+
+file_copy = 'pingan_copy.csv'
+file_name_copy = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'csv' +  '\\' + file_copy
+
+with open(file_name,"rt",encoding="utf-8") as csvfile:
+    reader = csv.reader(csvfile)
+    rows = [row for row in reader]
+    print(rows)
+
+wf = open(file_name_copy,'w')
+writer = csv.writer(wf)
+writer.writerow(['Date','Open','High','Low','Close','Volume','Adj Close'])
+writer.writerow(['Date','Open','High','Low','Close','Volume','Adj Close'])
+wf.flush()
+
+print("-----最好的方法-----")
+print("python2和python3的csv.reader.next的方法有所区别")
+
+file_copy_2 = 'pingan2.csv'
+file_name_copy2 = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'csv' +  '\\' + file_copy_2
+
+with open(file_name,'r') as rf:
+    reader = csv.reader(rf)
+    with open(file_name_copy2,'w') as wf:
+        writer = csv.writer(wf)
+        headers = next(reader)
+        writer.writerow(headers)
+        for row in reader:
+            #if row[0] < '2016-01-01':
+                #break
+            if int(row[5]) > 36961100:
+                writer.writerow(row)
+print("end")
+'''
+
+'''
+6-2 如何读写json数据
+
+实际案例：
+在web应用中常用JSON（JavaScript Object Notation）格式传输数据，例如我们利用Baidu语音识别服务做语音识别，将本地音频数据post到Baidu语音识别服务器，服务器响应结果为json字符串
+
+{"corpus_no":"6303355448008565863","err_msg":"success.","err_no":0,"result":["你好 ,"],"sn":"418359718861467614305"}
+
+在python中如何读写json数据？
+
+解决方案：
+使用标准库中的json模块，其中loads，dumps函数可以完成json数据的读写
+
+'''
+
+'''
+#coding:utf-8
+import requests
+import json
+
+# 录音
+from record import Record
+record = Record(channels=1)
+audioData = record.record(2)
+
+# 获取token
+from secret import API_KEY,SECRET_KEY
+authUrl = "https://openapi.baidu.com/oauth/2.0/token?grant_type=client_credentials&client_id=" + API_KEY + "&client_secret=" + SECRET_KEY
+response = requests.get(authUrl)
+res = json.loads(response.content)
+token = res['access_token']
+
+# 语音识别
+cuid = 'xxxxxxxxxxx'
+srvUrl = 'http://vop.baidu.com/server_api' + '?cuid=' + cuid + '&token=' + token
+httpHeader = {
+    'Content-Type':'audio/wav; rate = 8000',
+}
+response = requests.post(srvUrl,headers=httpHeader,data=audioData)
+res = json.loads(response.content)
+text = res['result'][0]
+
+print(u'\n识别结果:')
+print(text)
+
+'''
+
+'''
+# dumps将python对象转换为json的字符串
+l = [1,2,'abc',{'name': 'Bob','age':13}]
+print(json.dumps(l))
+
+d = {'b':None,'a':5,'c':'abc'}
+print(json.dumps(d))
+
+# 将逗号后的空格和冒号后的空格删除，将空格压缩掉
+print(json.dumps(l,separators=[',', ':']))
+
+# 对输出的字典中的键进行排序
+print(json.dumps(d,sort_keys=True))
+
+# 把json字符串转换为python对象
+l2 = json.loads('[1,2,"abc",{"name": "Bob","age":13}]')
+print(type(l2))
+
+d2 = json.loads('{"b":null,"a":5,"c":"abc"}')
+print(type(d2))
+'''
+
+'''
+file = 'demo.json'
+file_name = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) + \
+            '\\' + 'json' +  '\\' + file
+
+l = [1,2,'abc',{'name': 'Bob','age':13}]
+
+# 将json写入文件当中，dump和load同理
+with open(file_name,'w') as f:
+    json.dump(l,f)
+'''
