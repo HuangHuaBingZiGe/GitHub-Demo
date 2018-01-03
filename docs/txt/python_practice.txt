@@ -1,0 +1,1620 @@
+
+--------------------------------------------------------------------------------------------
+
+#1.如何在列表、字典、集合中根据条件筛选数据？
+
+    #实际案例：
+    
+            过滤掉列表[3,9,-1,10,20,-2...]中的负数
+            筛选出字典{'Lilei':79,'Jim':88,'Lucy':92...}中值高于90的项
+            筛选出集合{77,89,32,20...}中能被3整除的元素
+        
+
+    #通用做法：
+    
+data = [1,5,-3,-2,6,8,9]
+res = []
+for i in data:
+    if i >= 6:
+        res.append(i)
+print res
+
+		
+	#解决方案：
+			
+			列表:
+				filter函数:filter(lambda x : x >= 0 , data)
+				
+				列表解析:[x for x in data if x >= 0]
+				
+			字典：
+				字典解析:{k:v for k,v in d.iteritems() if v > 90}
+			
+			集合：
+				集合解析:{x for x in s if x % 3 == 0}
+
+				
+#传统方式
+from random import randint
+data = [randint(-10,10) for _ in xrange(10)]
+data 
+
+#第二种方式：filter函数
+filter?
+filter(lambda x: x >= 0,data)
+
+#第三种方式：列表解析
+[x for x in data if x >= 0]
+
+#第2和第3种方式效率远快于第1种方式：（列表解析速度更快）
+timeit filter(lambda x: x >= 0,data)
+timeit [x for x in data if x >= 0]
+
+#字典解析
+d = {x: randint(60,100) for x in xrange(1,21)}
+{k: v for k,v in d.iteritems() if v > 90}
+
+#集合解析
+data
+s = set(data)
+s
+{x for x in s if x % 3 == 0}
+
+----------------------------------------------------------------------------------------------
+
+#2.如何为元组中的每个元素命名，提高程序可读性？
+
+	#实际案例：	
+			
+			学生信息系统中数据为固定格式：
+			(名字，年龄，性别，邮箱地址，...)
+			
+			学生数量很大为了减小存储开销，对每个学生信息用元组表示
+			('Jim',16,'male','jim8721@gmail.com')
+			('LiLei',17,'male','leile@qq.com')
+			('Lucy',16,'female','lucy123@yahoo.com')
+			......
+			
+			#！！！！！！访问时，我们使用索引（index）访问，大量索引降低程序可读性，如何解决这个问题？
+		
+
+#传统方式		
+student = ('Jim',16,'male','jim8721@gmail.com')
+# name
+print student[0]
+# age
+if student[1] >= 18;
+# sex 
+if student[2] == 'male':
+
+	#解决方案：	
+			方案1：定义类似与其他语言的枚举类型，也就是定义一系列数值常量		
+			方案2：使用标准库中collections.namedtuple代替内置tuple
+
+
+#方案1:
+NAME,AGE,SEX,EMAIL = xrange(4)
+student = ('Jim',16,'male','jim8721@gmail.com')
+print student[NAME]
+if student[AGE] >= 18; 
+if student[SEX] == 'male':
+
+
+#方案2:
+from collections import namedtuple
+Student = namedtuple('Student',['name','age','sex','email'])
+s = Student('Jim',16,'male','jim8721@gmail.com')
+s
+s2 = Student(name='Jim', age=16, sex='male', email='jim8721@gmail.com')
+s2
+name
+s.age
+s.sex
+isinstance(s,tuple)
+
+--------------------------------------------------------------------------------------------
+
+#3.如何统计序列中元素的出现频度？
+
+	#实际案例：
+			
+			1.某随机序列[12,5,6,4,6,5,5,7...]中，找到出现次数最高的3个元素，它们出现的次数是多少？
+			2.对某英文文章的单词，进行词频统计，找到出现次数最高的10个单词，它们出现次数是多少？
+
+#传统方式		
+from random import randint
+data = [randint(0,20) for i in xrange(30)]	
+data
+c = dict.fromkeys(data,0)
+c
+for x in data:
+	c[x] += 1
+c
+	
+	#解决方案：		
+			
+			使用collections.Counter对象
+			将序列传入Counter的构造器，得到Counter对象是元素频度的字典
+			Counter.most_common(n)方法得到频度最高的n个元素的列表
+
+from collections import Counter
+c2 = Counter(data)
+c
+c2[10]
+c2[14]
+c2.most_common(3)
+
+
+import re
+txt = open('study.py').read()
+txt
+#用非字母分割
+c3 = Counter(re.split('\W+',txt))
+c3
+c3.most_common(10)
+
+--------------------------------------------------------------------------------------------
+
+#4.如何根据字典中值的大小，对字典中的项排序
+
+
+	#实际案例：
+			
+			某班英语成绩以字典形式存储为：{'LiLei':79,'Jim':88,'Lucy':92...}
+			根据成绩高低，计算学生排名
+
+	#解决方案：
+			
+			使用内置函数sorted
+			1.利用zip将字典数据转化为元组
+			2.传递sorted函数的key参数
+
+sorted([9,1,2,8,5])
+from random import randint
+{x: randint(60,100) for x in 'xyzabc'}	
+d = {x: randint(60,100) for x in 'xyzabc'}
+sorted(d)
+iter(d)
+list(iter(d))	
+(97,'a') > (69,'b')
+(97,'a') > (97,'b')
+d.keys()	
+d.values()
+#将两个列表拼成一个列表
+zip(d.values(),d.keys())
+#性能更优，存储空间少了一些浪费
+zip(d.itervalues(),d.iterkeys())
+sorted(zip(d.itervalues(),d.iterkeys()))
+
+
+d.items()			
+sorted(d.items(),key = lambda x: x[1])
+
+--------------------------------------------------------------------------------------------
+
+#5.如何快速找到多个字典中的公共键（key）？
+
+	#实际案例：
+				
+			西班牙足球甲级联赛，每轮球员进球统计：
+			第一轮：{'苏亚雷斯':1,'梅西':2,'本泽马':1,'C罗':3...}
+			第二轮：{'苏亚雷斯':2,'C罗':1,'格里兹曼':2,'贝尔':1...}
+			第三轮：{'苏亚雷斯':1,'托雷斯':2,'贝尔':1,'内马尔':1...}
+			...
+			
+			统计出前N轮，每场比赛都有进球的球员
+			
+#传统方式			
+from random import randint,sample
+# 随机取样出3个
+sample('abcdefg',3)
+# 随机取3到6个
+sample('abcdefg',randint(3,6))
+# 字典解析
+s1 = {x: randint(1,4) for x in sample('abcdefg',randint(3,6))}				
+s2 = {x: randint(1,4) for x in sample('abcdefg',randint(3,6))}	
+s3 = {x: randint(1,4) for x in sample('abcdefg',randint(3,6))}	
+s1
+s2
+s3		
+res = []
+for k in s1:
+	if k in s2 and k in s3:
+		res.append(k)
+res	
+			
+			
+	#解决方案：
+		
+		利用集合（set）的交集操作
+		1.使用字典的viewkeys()方法，得到一个字典keys的集合
+		2.使用map函数，得到所有字典的keys的集合
+		3.使用reduce函数，取所有字典的keys的集合的交集
+		
+s1
+s1.viewkeys?
+s1.viewkeys()
+s2.viewkeys()
+s1.viewkeys() & s2.viewkeys()
+s1.viewkeys() & s2.viewkeys() & s3.viewkeys()
+			
+#n轮
+map(dict.viewkeys,[s1,s2,s3])
+reduce(lambda a,b:a & b , map(dict.viewkeys,[s1,s2,s3]))
+			
+--------------------------------------------------------------------------------------------
+
+#6.如何让字典保持有序？
+
+	#实际案例：
+		某编程竞赛系统，对参赛选手编程解题进行计时，选手完成题目后，把该选手解题用时记录到字典中，以便赛后按选手名查询成绩（答题用时越短，成绩越优）
+		('LiLei':(2,43),'HanMeimei':(5,52),'Jim':(1,39)...)
+		
+		比赛结束后，需按排名顺序依次打印选手成绩，如何实现？
+			
+d = {}
+d['Jim'] = (1,35)
+d['Leo'] = (2,37)
+d['Bob'] = (3,40)
+for k in d: print k			
+			
+			
+	#解决方案：
+	
+		使用collections.OrderedDict
+		以OrderedDict替代内置字典Dict，依次将选手成绩存入OrderedDict
+		
+		
+from collections import OrderedDict
+d = OrderedDict()
+d['Jim'] = (1,35)
+d['Leo'] = (2,37)
+d['Bob'] = (3,40)
+for k in d: print k 
+
+
+vim e.py
+
+from time import time 
+from random import randint
+from collections import OrderedDict
+
+d = OrderedDict()
+players = list('ABCDEFGH')
+start = time()
+
+for i in xrange(8):
+	raw_input()
+	p = players.pop(randint(0,7 - i))
+	end = time()
+	print i + 1,p,end - start,
+	d[p] = (i + 1,end - start)
+
+print 
+print '-' * 20
+
+for k in d:
+	print k,d[k]
+	
+chmod +x e.py	
+	
+--------------------------------------------------------------------------------------------
+
+#7.如何实现用户的历史记录功能（最多n条）？
+
+	#实际案例：
+			
+			很多应用程序都有浏览用户的历史记录的功能，例如：
+			浏览器可以查看最近访问过的网页
+			视频播放器可以查看最近播放过的视频文件
+			shell可以查看用户输入过的命令
+			........
+			
+			现在我们制作了一个简单的猜数字的小游戏，
+			添加历史记录功能，显示用户最近猜过的数字，如何实现？
+			
+vim guess.py	
+	
+from random import randint
+
+N = randint(0,100)
+
+def guess(k):
+	if k == N:
+		print 'right'
+		#为了跳出循环
+		return True
+	if k < N:
+		print '%s is less-than N' % k
+	else:
+		print '%s is greater-than N' % k
+	return False
+
+while True:
+	line = raw_input('please input a number:')
+	if line.isdigit():
+		k = int(line)
+		if guess(k):
+			break
+	
+chmod +x guess.py	
+	
+	
+	#解决方案：
+	
+			使用容量为n的队列存储历史记录
+			使用标准库collections的deque，它是一个双端循环队列
+			程序退出前，可以使用pickle将队列对象存入文件，再次运行程序时将其导入
+
+vim guess.py
+			
+from collections import deque
+q = deque([],5)
+q.append(1)
+q.append(2)
+q.append(3)
+q.append(4)
+q.append(5)
+q
+q.append(6)
+q	
+	
+	
+from random import randint
+from collections import deque
+
+N = randint(0,100)
+history = deque([],5)
+
+def guess(k):
+	if k == N:
+		print 'right'
+		#为了跳出循环
+		return True
+	if k < N:
+		print '%s is less-than N' % k
+	else:
+		print '%s is greater-than N' % k
+	return False
+
+while True:
+	line = raw_input('please input a number:')
+	if line.isdigit():
+		k = int(line)
+		history.append(k)
+		if guess(k):
+			break	
+	elif line == 'history' or line == 'h?':
+		print list(history)
+	
+chmod +x guess.py	
+	
+	
+import pickle
+q
+pickle.dump?
+pickle.dump(q,open('history','w'))
+pickle.load?
+q2 = pickle.load(open('history'))
+q2
+	
+--------------------------------------------------------------------------------------------	
+	
+#8.如何实现可迭代对象和迭代器对象？（code有问题）
+
+	#实际案例：
+		
+		某软件要求，从网络抓取各个城市气温信息，并依次显示
+		北京：15~20
+		天津：17~22
+		长春：12~18
+		...
+		
+		如果一次抓取所有城市天气再显示，显示第一个城市气温时，有很高的延时，并且浪费存储空间，
+		我们期望以“用时访问”的策略，并且能把所有城市气温封装到一个对象里，可用for语句进行迭代，如何解决？
+		
+l = [1,2,3,4]
+s = 'abcde'
+for x in l:print x
+for x in s:print x	
+#由可迭代对象得到迭代器
+iter?
+#得到一个迭代器对象
+iter(l)
+iter(s)
+iter(5)
+l.__
+l.__iter__()
+iter(l)
+s.__
+s.__getitem__()	
+
+
+t = iter(l)
+t.next()
+t.next()	
+t.next()
+t.next()	
+t.next()
+for x in l:print x
+			
+	
+	#解决方案：
+		
+		1.实现一个迭代器对象WeatherIterator，next方法每次返回一个城市气温
+		2.实现一个可迭代对象WeatherIterable，__iter__方法返回一个迭代器对象
+	
+	
+vim iter.sh
+
+#coding:utf8
+
+import requests
+def getweather(city):
+	r = requests.get(u'http://wthrcdn.etouch.cn/weather_mini?city=' + city)
+	data = r.json()['data']['forecast'][0]
+	return '%s: %s , %s ' % (city,data['low'],data['high'])
+	
+#[u'北京',u'上海',u'广州',u'长春']
+print getWeather(u'北京')
+print getWeather(u'长春')
+	
+chmod +x guess.py	
+
+from collections import Iterable,Iterator
+
+#迭代器对象
+Iterator.__abstractmethods__
+#frozenset({'next'})
+#可迭代对象
+Iterable.__abstractmethods__	
+#frozenset({'__iter__'})	
+
+vim iter.sh
+
+#coding:utf8
+
+import requests
+def getweather(city):
+	r = requests.get(u'http://wthrcdn.etouch.cn/weather_mini?city=' + city)
+	data = r.json()['data']['forecast'][0]
+	return '%s: %s , %s ' % (city,data['low'],data['high'])
+	
+#[u'北京',u'上海',u'广州',u'长春']
+#print getWeather(u'北京')
+#print getWeather(u'长春')
+	
+from collections import Iterable,Iterator
+
+class WeatherIterator(Iterator):
+	def __init__(self,cities):
+		self.cities = cities
+		self.index = 0
+	
+	def getweather(self,city):
+		r = requests.get(u'http://wthrcdn.etouch.cn/weather_mini?city=' + city)
+		data = r.json()['data']['forecast'][0]
+		return '%s: %s , %s ' % (city,data['low'],data['high'])
+	
+	def next(self):	
+		if self.index == len(self.cities):
+			#执行到末端，抛出一个异常
+			raise StopIteration
+		city = self.cities[self.index]
+		self.index += 1
+		return self.getWeather(city)
+
+#继承Iterable
+class WeatherIterable(Iterable):
+	#定义构造器
+	def __init__(self,cities):
+		self.cities = cities
+
+	def __iter__(self):
+		#返回一个实例，得到它的一个对象
+		return WeatherIterator(self.cities)
+
+for x in WeatherIterable([u'北京',u'上海',u'广州',u'长春'])
+	print x	
+				
+chmod +x guess.py		
+	
+--------------------------------------------------------------------------------------------		
+	
+#9.如何使用生成器函数实现可迭代对象？
+
+	#实际案例：	
+		
+		实现一个可迭代对象的类，它能迭代出给定范围内的所有素数：
+		
+		pn = PrimeNumber(1,30)
+		for k in pn:
+			print k,
+		
+		输出结果：
+		2 3 5 7 11 13 17 19 23 29
+			 
+			
+#什么是生成器函数？（包含yield语句的函数）
+
+def f():
+	print 'in f(), 1'
+	yield 1
+	
+	print 'in f(), 2'
+	yield 2
+	
+	print 'in f(), 3'
+	yield 3
+	
+g = f()	
+
+#print g.next()
+#print g.next()	
+#print g.next()
+#print g.next()
+
+#for x in g:
+#	print x
+
+print g.__iter__() is g
+
+	#解决方案：
+		
+		将该类的__iter__方法实现成生成器函数，每次yield返回一个素数
+		
+vim el.py
+
+class PrimeNumbers:
+	def __init__(self,start,end):
+		self.start = start
+		self.end = end
+	
+	def isPrimeNumber(self,k):
+		if k < 2:
+			return False
+	
+		for i in xrange(2,k):
+			if k % i == 0:
+				return False
+				
+		return True
+
+	def __iter__(self):
+		for k in xrange(self.start,self.end + 1):
+			if self.isPrimeNumber(k):
+				yield k
+
+for x in PrimeNumbers(1,100):
+	print x
+
+--------------------------------------------------------------------------------------------
+
+#10.如何读写excel文件？
+
+	#实际案例：
+			
+			Microsoft Excel是日常办公中使用最频繁的软件，其数据格式为xls，xlsx，一种非常常用
+			的电子表格，小学某班成绩，记录在excel文件中：
+			
+			姓名	语文	数学	外语
+			李雷	95		99		96
+			韩梅	98		100		93
+			张峰	94		95		95
+			...
+			
+			利用python读写excel，添加“总分”列，计算每人总分
+			
+	#解决方案：	
+			
+			利用pip安装		$ pip install xlrd xlwt
+			使用第三方库xlrd和xlwt，这两个库分别用于excel读和写
+
+import xlrd
+
+book = xlrd.open_workbook('demo.xlsx')
+book.sheets()
+sheet = book.sheet_by_index(0)
+sheet.nrows
+sheet.ncols
+sheet.cell?
+cell = sheet.cell(0,0)
+cell.ctype					#代表内容的类型
+xlrd.XL_CELL_TEXT			#文本类型对应的数字
+xlrd.XL_CELL_NUMBER
+cell.value
+print cell.value
+sheet.cell(1,1)
+cell = sheet.cell(1,1)
+cell.ctype
+cell.value
+sheet.row?
+sheet.row(1)
+sheet.row_values?
+sheet.row_values(1)
+sheet.row_values(1,1)
+sheet.put_cell?				#添加单元格
+
+import xlwt
+
+wbook = xlwt.Workbook()
+wsheet = wbook.add_sheet('sheet1')	#添加表名
+wsheet.write?
+wbook.save('output.xlsx')
+
+
+vim excel.py					########--------------------生成的excel打不开!!!!!!!!!
+
+#coding:utf8
+import xlrd,xlwt
+
+rbook = xlrd.open_workbook('demo.xlsx')
+rsheet = rbook.sheet_by_index(0)
+
+nc = rsheet.ncols
+rsheet.put_cell(0,nc,xlrd.XL_CELL_TEXT,u'总分',None)
+
+for row in xrange(1,rsheet.nrows):
+	t = sum(rsheet.row_values(row,1))
+	rsheet.put_cell(row,nc,xlrd.XL_CELL_NUMBER,t,None)
+	
+wbook = xlwt.Workbook()
+wsheet = wbook.add_sheet(rsheet.name)
+style = xlwt.easyxf('align: vertical center, horizontal center')
+
+for r in xrange(rsheet.nrows):
+	for c in xrange(rsheet.ncols):
+		wsheet.write(r,c,rsheet.cell_value(r,c),style)
+
+wbook.save('output.xlsx')
+
+
+--------------------------------------------------------------------------------------------
+
+#11.如何进行反向迭代以及如何实现反向迭代？
+
+	#实际案例：
+		
+		实现一个连续浮点数发生器FloatRange(和xrange类似)，根据给定范围(start,end)和步进值（step）产生一系列连续浮点数，如迭代FloatRange(3.0,4.0,0.2)可产生序列
+		
+		正向：3.0->3.2->3.4->3.6->3.8->4.0
+		反向：4.0->3.8->3.6->3.4->3.2->3.0
+
+l = [1,2,3,4,5]
+l.reverse()			#会改变原列表
+l
+l[::-1]				#步进值为-1的切片操作，可以得到一个反序列表
+reversed(l)			#得到一个列表的反向迭代器
+iter(l)				#得到一个列表的正向迭代器
+for i in reversed(l):
+	print i
+
+#iter(l)		实际调用的是		l.__iter__这个方法
+
+l.__reversed__?
+
+	
+	#解决方案：
+	
+		实现反向迭代协议的__reversed__方法，它返回一个反向迭代器
+	
+vim reversed.py
+	
+class FloatRange:
+	def __init__(self,start,end,step=0.1):
+		self.start = start
+		self.end = end
+		self.step = step
+		
+	def __iter__(self):
+		t = self.start
+		while t <= self.end:
+			yield t
+			t += self.step
+			
+	def __reversed__(self):
+		t = self.end
+		while t >= self.start:
+			yield t 
+			t -= self.step
+		
+#for x in FloatRange(1.0,4.0,0.5):			#正向迭代
+#	print x
+		
+for x in reversed(FloatRange(1.0,4.0,0.5)):		#反向迭代
+	print x
+		
+--------------------------------------------------------------------------------------------
+
+#12.如何对迭代器做切片操作？
+
+	#实际案例：
+	
+		有某个文本文件，我们想读取某中某范围的内容，如100~300行之间的内容，
+		python中文本文件是可迭代对象，我们是否可以使用类似列表切片的方式得到
+		一个100~300行文件内容的生成器？
+		
+f = open('/root/install.log')
+f[100:300]  #可以么？
+
+lines = f.readlines()
+lines 
+lines[100:300]
+
+
+f.seek(0)
+
+for line in f:
+	print line,
+
+	
+	#解决方案：使用标准库中的itertools.islice,它能返回一个迭代对象切片的生成器
+
+from itertools import islice 
+islice?
+islice(f,100,300)
+
+for line in islice(f,100,300):			#不好使！！！！！！！！！！  得到100到300行 
+	print line,
+
+islice(f,500)							#前500行
+islice(f,100,None)						#100行到最后
+islice(f,100,-100)						#负索引不支持！！！！！！！
+
+
+l = range(20)
+l 
+t = iter(l)
+for x in islice(t,5,10):
+	print x 
+	
+for x in t:
+	print x 
+
+--------------------------------------------------------------------------------------------
+
+
+#13.如何在一个for语句中迭代多个可迭代对象？
+
+	#实际案例：
+			
+		1.某班学生期末考试成绩，语文、数学、英语分别存储在3个列表中，同时迭代3个列表，计算每个学生的总分（并行）
+
+		2.某年级有4个班，某次考试每班英语成绩分别存储在4个列表中，依次迭代每个列表，统计全年级成绩高于90分人数（串行）
+			
+from random import randint 
+
+chinese = [randint(60,100) for _ in xrange(40)]
+
+math = [randint(60,100) for _ in xrange(40)]
+
+english = [randint(60,100) for _ in xrange(40)]
+			
+for i in xrange(len(math)):	
+    chinese[i] + math[i] + english[i]
+	
+	
+	#解决方案：
+	
+		并行：使用内置函数zip，它能将多个可迭代对象合并，每次迭代返回一个元组
+		
+		串行：使用标准库中的itertools.chain，它能将多个可迭代对象连接
+		
+zip([1,2,3,4],('a','b','c','d'))
+			
+zip([1,2,3,4],('a','b','c','d'),[7,8,9,10])			
+			
+total = []
+
+for c,m,e in zip(chinese,math,english):
+    total.append(c + m + e)
+
+total	
+
+
+from itertools import chain 
+
+chain?
+
+for x in chain([1,2,3,4],['a','b','c']):
+	print x
+
+e1 = [randint(60,100) for _ in xrange(40)]
+
+e2 = [randint(60,100) for _ in xrange(42)]
+
+e3 = [randint(60,100) for _ in xrange(42)]
+
+e4 = [randint(60,100) for _ in xrange(39)]
+
+count = 0
+
+for s in chain(e1,e2,e3,e4):
+	if s > 90:
+		count += 1
+		
+count 
+
+--------------------------------------------------------------------------------------------
+
+#14.如何拆分含有多种分隔符的字符串？
+
+	#实际案例：
+	
+		我们要把某个字符串依据分隔符号拆分不同的字段，该字符串包含多种不同的分隔符，例如：
+		s = 'ab;cd|efg|hi,jkl|mn\topq;rst,uvw\txyz'
+		其中<,><;><|><\t>都是分隔符号，如何处理？
+		
+!ps aux 
+
+x = !ps aux 
+
+x
+
+s = x[-1]	#取列表的最后一项
+
+s  
+
+s.split?	#如果以空白进行分隔，不用传参数
+
+s.split()
+
+	#解决方案：
+	
+		1.连续使用str.split()方法，每次处理一种分隔符
+		
+		2.使用正则表达式的re.split()方法，一次性拆分字符串
+
+s = 'ab;cd|efg|hi,jkl|mn\topq;rst,uvw\txyz'
+
+res = s.split(';')
+
+map(lambda x: x.split('|'),res)
+
+t = []
+
+map(lambda x: t.extend(x.split('|')),res)
+
+res = t 
+
+t = []
+
+map(lambda x: t.extend(x.split(',')),res)
+
+t
+
+
+
+def mySplit(s,ds):
+	res = [s]
+	
+	for d in ds:
+		t = []
+		map(lambda x: t.extend(x.split(d)),res)
+		res = t 
+	return res 
+	
+s = 'ab;cd|efg|hi,jkl|mn\topq;rst,uvw\txyz'
+print mySplit(s,';,|\t')
+
+
+s = 'ab;cd|efg|hi,,jkl|mn\topq;rst,uvw\txyz'	#如果有连续的两个分隔符，会出问题
+
+
+def mySplit(s,ds):
+	res = [s]
+	
+	for d in ds:
+		t = []
+		map(lambda x: t.extend(x.split(d)),res)
+		res = t 
+	return [x for x in res if x]				#只有字符串非空时才保留，这样就过滤掉了连续的分隔符 
+	
+s = 'ab;cd|efg|hi,,jkl|mn\topq;rst,uvw\txyz'
+print mySplit(s,';,|\t')
+
+
+
+import re 
+
+re.split?
+s = 'ab;cd|efg|hi,,jkl|mn\topq;rst,uvw\txyz'
+re.split(r'[,;\t|]+',s)
+
+--------------------------------------------------------------------------------------------
+
+#15.如何判断字符串a是否以字符串b开头或结尾？
+
+	#实际案例：
+		
+		某文件系统目录下有一系列文件：
+		
+		quicksort.c
+		graph.py 
+		heap.java
+		install.sh
+		stack.cpp 
+		
+		编写程序给其中所有的.sh文件和.py文件加上用户可执行权限
+
+	#解决方案：
+	
+		使用字符串的str.startswith()和str.endswith()方法
+		注意：多个匹配时参数使用元组
+		
+import os, stat 
+
+os.listdir('/home/python_test')
+
+s = 'g.sh'
+
+s.endswith('.sh')			
+			
+s.endswith('.py')			
+			
+s.endswith(('.sh','.py'))	#这个方法只能穿元组，传列表的话有问题
+
+[name for name in os.listdir('/home/python_test') if name.endswith(('.sh','.py'))]
+
+os.stat('e.py')
+
+os.stat('e.py').st_mode		#关于文件模式的十进制数
+
+oct(os.stat('e.py').st_mode)	#转换成八进制数？？？？转换出的权限值和linux文件系统中的不一致？？？
+
+os.chmod('e.py',os.stat('e.py').st_mode | stat.S_IXUSR)
+
+--------------------------------------------------------------------------------------------
+
+#16.如何调整文本字符串中文本的格式？
+
+	#实际案例：
+	
+		某软件的log文件，其中的日期格式为'yyyy-mm-dd'
+		
+		2016-05-23 10:59:26 status unpacked python3-pip:all  
+		2016-05-23 10:59:26 status half-configured python3-pip:all
+		2016-05-23 10:59:26 status installed python3-pip:all 
+		2016-05-23 10:59:26 status configure python3-where:all 0.24.0-1
+		
+		我们想把其中日期改为美国日期的格式'mm/dd/yyyy'.'2016-05-23' => '05/23/2016',应如何处理？
+		
+	#解决方案：
+		
+		使用正则表达式re.sub()方法做字符串替换，利用正则表达式的捕获组，捕获每个部分内容，再替换字符串中调整各个捕获的顺序
+
+log = open('/home/python_test/a.log').read()		
+	
+import re 
+
+re.sub?		#字符串替换方法
+
+print re.sub('(\d{4})-(\d{2})-(\d{2})',r'\2/\3/\1',log)	
+	#\d代表数字，4代表4位数字,()利用了捕获组，r代表使用原始字符串(raw)
+
+r'\1'
+'\1'
+len('\1')
+len(r'\1')
+
+print re.sub('(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})',r'\g<month>/\g<day>/\g<year>',log)		#使用组的别名
+
+--------------------------------------------------------------------------------------------
+
+#17.如何将多个小字符串拼接成一个大的字符串？
+
+	#实际案例：
+	
+		在设计某网络程序时，我们自定义了一个基于UDP的网络协议，按照固定次序向服务器传递了一系列参数：
+		
+		#	UDP协议：不能保证先发送的包先到达，要把参数拼接成一个进行发送
+		
+		hwDetect:				"<0112>"
+		gxDepthBits:			"<32>"
+		gxResolution:			"<1024x768>"
+		gxRefresh:				"<60>"
+		fullAlpha:				"<1>"
+		lodDist:				"<100.0>"
+		DistCull:				"<500.0>"
+		
+		在程序中我们将每个参数按次序收集到列表中：
+		["<0112>","<32>","<1024x768>","<60>","<1>","<100.0>","<500.0>"]
+		最终我们要把各个参数拼接成一个数据报进行发送
+		"<0112><32><1024x768><60><1><100.0><500.0>"
+		
+	#解决方案：
+		
+		1.迭代列表，连续使用'+'操作依次拼接每一个字符串
+		
+		2.使用str.join()方法，更加快速的拼接列表中所有的字符串	---推荐
+		
+s1 = 'abcdefg'
+s2 = '12345'
+
+s1 + s2 		#本质上是运算符重载
+
+str.__		
+
++ 				#等价于
+str.__add__()
+
+str.__add__(s1,s2)
+
+		
+s1 > s2 		#等价于
+str.__gt__(s1,s2)
+
+
+pl = ["<0112>","<32>","<1024x768>","<60>","<1>","<100.0>","<500.0>"]
+		
+s = ''
+
+for p in pl:
+	s += p
+	print s 			#这个方法存在大量的临时对象的创建，拷贝，释放，如果字符串列表很长，将会有很大的开销
+	
+s 
+		
+		
+str.join?
+
+';'.join(['abc','123','xyz'])		
+		
+''.join(['abc','123','xyz'])				
+		
+''.join(pl)		#不存在临时变量的浪费
+
+
+l = ['abc',123,45,'xyz']
+
+''.join([str(x) for x in l])		#列表解析 会生成一个列表，不如使用下面的生成器表达式
+(str(x) for x in l)					#生成器表达式的开销要比列表的创建生成小得多
+''.join(str(x) for x in l)			#生成器表达式，作为参数传递时可以不用加括号
+
+--------------------------------------------------------------------------------------------
+
+#18.如何对字符串进行左、右、居中对齐？
+
+	#实际案例:
+	
+		某个字典存储了一系列属性值：
+		
+		{
+			"lodDist":100.0,
+			"SmallCull":0.04,
+			"DistCull":500.0,
+			"trilinear":40,
+			"farclip":477
+		}
+
+		在程序中，我们想以以下工整的格式将其内容输出，如何处理？
+		
+		SmallCull:0.04
+		farclip  :477
+		lodDist	 :100.0
+		DistCull :500.0
+		trilinear:40
+		
+	#解决方案：
+	
+		1.使用字符串的str.ljust(),str.rjust(),str.center()进行左、右、居中对齐
+		
+		2.使用format()方法，传递类似'<20','>20','^20'参数完成同样的任务
+		
+		
+s = 'abc'
+
+s.ljust?
+
+s.ljust(20)
+
+s.ljust(20,'=')
+
+s.rjust(20,'=')
+
+len(s.rjust(20))
+
+s.center(20)
+		
+format?
+
+format(s,'<20')			#在format方法中，用< 符号表示左对齐
+
+format(s,'>20')
+
+format(s,'^20')
+
+d = {
+		"lodDist":100.0,
+		"SmallCull":0.04,
+		"DistCull":500.0,
+		"trilinear":40,
+		"farclip":477
+}
+
+d.keys()				#得到每一个键
+
+map(len,d.keys())
+
+max(map(len,d.keys())) 
+
+w = max(map(len,d.keys()))
+
+for k in d:
+	print k.ljust(w),':',d[k]
+
+--------------------------------------------------------------------------------------------
+
+#19.如何去掉字符串中不需要的字符？
+
+	#实际案例:
+
+		1.过滤掉用户输入中前后多余的空白字符：
+		'    nick2008@gmail.com   '
+	
+		2.过滤掉某windows下编辑文本中的'\r':
+		'hello world\r\n'
+		
+		3.去掉文本中的unicode组合符号（音调）：
+		u'ní hǎo,chī fàn'
+		
+	#解决方案：
+	
+		1.字符串strip(),lstrip(),rstrip()方法去掉字符串两端字符
+		
+		2.删除单个固定位置的字符，可以使用切片 + 拼接的方式
+		
+		3.字符串的replace()方法或正则表达式re.sub()删除任意位置字符
+		
+		4.字符串translate()方法，可以同时删除多种不同字符
+		
+s =  '   abc   213  '
+
+s.strip?
+
+s.strip()				#去掉两端的空白字符
+
+s.lstrip()
+
+s.rstrip()
+
+s = '---abc++++'		#删除任意字符
+
+s.strip('-+')
+
+
+s = 'abc:123'
+
+s[:3] + s[4:]			#切片  加  拼接
+
+
+s = '\tabc\t123\txyz'
+
+s.replace('\t','')		#replace只能替换当中的1种字符
+
+
+s = '\tabc\t123\txyz\ropq'
+
+import re 
+
+re.sub('[\t\r]','',s)
+
+
+#2个translate的目的相同，使用方法有所区别
+str.translate?
+unicode.translate?
+
+
+s = 'abc1230323xyz'
+
+import string 
+
+string.maketrans('abcxyz','xyzabc')		#得到一个映射表
+
+s
+
+s.translate(string.maketrans('abcxyz','xyzabc'))
+
+s = 'abc\refg\n2345\t'
+
+s.translate(None,'\t\r\n')
+
+
+u = u'ní hǎo,chī fàn'
+
+u 
+
+u.translate?
+
+print u.translate({0x012b:None})
+
+print u.translate(dict.fromkeys([0x0301,0x030c,0x0304,0x0300]))
+
+--------------------------------------------------------------------------------------------
+
+#20.如何读写文本文件？
+
+	#实际案例：	
+	
+		某文本文件编码格式已知（如UTF-8，GBK，BIG5）
+		在python2.x和python3.x中分别如何读取该文件？
+		
+	#解决方案：	
+	
+		字符串的语义发生了变化
+		
+		python2  			python 3
+		
+		str  		->		bytes
+		unicode		->		str 
+		
+		python2.x 	写入文件前对unicode编码，读入文件后对二进制字符串解码
+		python3.x	open函数指定't'的文本格式，encoding指定编码格式
+
+'abcdefg'
+
+ord('a')
+
+ord('b')
+
+s = u'你好'		
+			
+s.encode('utf8')				#6个字节	
+			
+s.encode('gbk')					#4个字节
+
+'\xe4\xbd\xa0\xe5\xa5\xbd'.decode('gbk')
+
+print u'\u6d63\u72b2\u30bd'		#编解码要一致，否则会出现乱码
+
+
+'\xe4\xbd\xa0\xe5\xa5\xbd'.decode('utf8')
+
+print '\xe4\xbd\xa0\xe5\xa5\xbd'.decode('utf8')
+
+
+#python2中的文本读写
+
+f = open('py2.txt','w')
+s = u'你好'
+f.write(s.encode('gbk'))
+f.close()
+f = open('py2.txt','r')
+t = f.read()
+t 
+t.decode('gbk')
+print t.decode('gbk')
+
+
+#python3中的文本读写
+
+b'efjwefwe'		#等价于  python2中的  'efjwefwe'
+
+'你好'			#等价于  python2中的  u'你好'	
+	
+
+f = open('py3.txt','wt',encoding='utf8')
+	#t表示文本模式，可以根据encoding自动进行编解码，比python2更方便,t不写也是按默认t方式打开
+
+f.write('你好，我爱编程，')
+			
+f.close()
+
+f = open('py3.txt','rt',encoding='utf8')
+			
+s = f.read()
+
+print(s)			
+
+--------------------------------------------------------------------------------------------
+
+#21.如何处理二进制文件？
+
+	#实际案例：
+	
+		wav是一种音频文件的格式，音频文件为二进制文件，wav文件由头部信息和音频采样数据构成
+		前44个字节为头部信息，包括声道数，采样频率，PCM位宽等等，后面是音频采样数据
+		
+		使用python，分析一个wav文件头部信息，处理音频数据
+		
+		wav格式
+		
+	#解决方案：
+	
+		open函数想以二进制模式打开文件，指定mode参数为'b'
+		二进制数据可以用readinto，读入到提前分配好的buffer中，便于数据处理
+		解析二进制数据可以使用标准库中的struct模块的unpack方法
+		
+f = open('/home/python_test/a.mp3','rb')
+
+info = f.read(44)
+
+info 
+
+import struct 
+
+struct.unpack?						#默认都是以小段字节序存储
+
+struct.unpack('h','\x01\x02')		#h以小段字节序进行解析,wav的格式
+
+struct.unpack('>h','\x01\x02')
+
+struct.unpack('h',info[22:24])
+
+struct.unpack('i',info[24:28])		#整型
+
+struct.unpack('h',info[34:36])
+
+
+import array 
+			
+f.seek(0,2)							#2表示移动到文件的末尾
+f.tell()			
+			
+n = (f.tell() - 44) / 2			
+			
+buf = array.array('h',(0 for _ in xrange(n)))			
+			
+f.seek(44)	
+	
+f.readinto(buf)
+
+buf[0]
+
+buf[5]
+
+buf[10]	
+
+for i in xrange(n):buf[i] /= 8
+
+f2 = open('demo2.wav','wb')
+
+f2.write(info)
+
+buf.tofile(f2)
+
+f2.close()
+
+vlc demo.wav		#安装此软件后，在linux命令行运行此命令，可能会依赖图形化界面
+vlc demo2.wav 		#压缩后，声音轻了很多 	
+			
+--------------------------------------------------------------------------------------------
+
+#22.如何设置文件的缓冲？
+
+				
+	#实际案例：
+	
+		将文件内容写入到硬件设备时，使用系统调用，这类IO操作的时间很长，为了减少IO操作的次数，文件通常使用缓冲区（有足够多的数据才进行系统调用），文件的缓冲行为，分为全缓冲，行缓冲，无缓冲
+		
+		如何设置pyhton中文件对象的缓冲行为？
+		
+f = open('demo.txt','w')		
+		
+f.write('abc')			
+			
+f.write('+' * 4093)			
+			
+f.write('-' * 4095)		#块大小是根据平台和块设备的自身属性相关的
+
+
+	#解决方案：
+	
+		全缓冲：open函数的buffering设置为大于1的整数n，n为缓冲区大小
+		
+		行缓冲：open函数的buffering设置为1
+		
+		无缓冲: open函数的buffering设置为0
+			
+f = open('demo2.txt','w',buffering=2048)			
+			
+f.write('+' * 1024)
+f.write('+' * 1023)			
+f.write('-' * 2)			
+			
+f = open('demo3.txt','w',buffering=1)			
+			
+f.write('abcd')
+f.write('1231')			
+f.write('\n')			
+			
+f = open('demo4.txt','w',buffering=0)
+f.write('a')			
+			
+--------------------------------------------------------------------------------------------
+
+#23.如何将文件映射到内存？
+
+	#实际案例：
+	
+		1.在访问某些二进制文件时，希望能把文件映射到内存中，可以实现随机访问.(framebuffer设备文件)
+		
+		2.某些嵌入式设备，寄存器被编址到内存地址空间，我们可以映射/dev/mem某范围，去访问这些寄存器
+		
+		3.如果多个进程映射同一个文件，还能实现进程通信的目的
+		
+		
+	#解决方案：
+	
+		使用标准库中mmap模块的mmap()函数，它需要一个打开的文件描述符作为参数
+		
+dd if=/dev/zero of=demo.bin bs=1024 count=1024		#创建一个二进制文件
+		
+od -x demo.bin 			#以十六进制查看这个文件		
+		
+import mmap 
+
+mmap.mmap?				#需要一个系统描述符的参数
+
+import os 
+
+os.open?				#系统描述符参数在这个函数中
+
+f = open('/root/demo.bin','r+b')
+
+f.fileno()				#报告文件描述符
+
+m = mmap.mmap(f.fileno(),0,access=mmap.ACCESS_WRITE)		#0表示整个文件进行映射
+		
+type(m)		
+		
+m[0]
+
+m[10:20]
+
+m[0] = '\x88'		
+		
+m[4:8] = '\xff' * 4		
+		
+#mmap.mmap()	offset	必须以内存页的大小进行对齐，必须是PAGESIZE的整数倍		
+
+m = mmap.mmap(f.fileno(),mmap.PAGESIZE * 8,access=mmap.ACCESS_WRITE,offset=mmap.PAGESIZE * 4)		
+		
+m[:0x1000] = '\xaa' * 0x1000			
+			
+--------------------------------------------------------------------------------------------
+
+#24.如何访问文件的状态？
+
+	#实际案例：
+	
+		在某些项目中，我们需要获得文件状态，例如：
+		
+		1.文件的类型（普通文件，目录，符号链接，设备文件...）
+		
+		2.文件的访问权限
+		
+		3.文件的最后的访问/修改/节点状态更改时间
+		
+		4.普通文件的大小
+		
+		
+	#解决方案：
+	
+		系统调用：标准库中os模块下的三个系统调用stat，fstat，lstat获取文件状态
+		
+		快捷函数：标准库中os.path下一些函数，使用起来更加简洁
+		
+import os 
+
+os.stat?
+
+os.stat('a.log')
+
+os.lstat?
+
+os.fstat?
+
+s = os.stat('a.log')
+
+s 
+
+s.st_mode
+
+bin(s.st_mode)
+
+import stat 
+
+stat.S_ISDIR(s.st_mode)			#判断s是否是目录
+
+stat.S_ISREG(s.st_mode)			#判断s是否是常规文件
+
+s.st_mode & stat.S_IRUSR		#获取文件的用户的读取权限
+
+ll a.log
+
+s.st_mode & stat.S_IXUSR		#获取文件的用户的执行权限，与操作
+
+s.st_atime
+
+import time 
+
+time.localtime(s.st_atime)
+
+ll a.log 
+
+
+s.st_size
+
+os.path.isdir('x.txt')
+
+os.path.islink('x.txt')
+
+os.path.isfile('a.txt')
+
+os.path.getatime('a.txt')
+
+os.path.getsize('a.txt')
+
+--------------------------------------------------------------------------------------------
+
+#25.如何使用临时文件？
+
+	#实际案例：
+	
+		某项目中，我们从传感器采集数据，每收集到1G数据后，做数据分析，最终只保存分析结果，这样很大的临时数据如果常驻内存，将消耗大量的内存资源，我们可以使用临时文件存储这些临时数据（外部存储）
+		
+		临时文件不用命名，且关闭后会自动被删除
+		
+	#解决方案：
+	
+		使用标准中tempfile下的TemporaryFile,NamedTemporaryFile
+		
+from tempfile import TemporaryFile,NamedTemporaryFile
+
+TemporaryFile?
+
+f = TemporaryFile()				#在文件系统路径中找不到TemporaryFile这个文件，只能从本进程下进行访问
+
+f.write('abcdef' * 100000)
+
+f.seek(0)
+
+f.read(100)
+
+
+NamedTemporaryFile?
+
+ntf = NamedTemporaryFile()		#关闭后自动删除
+
+ntf.name
+
+ntf = NamedTemporaryFile(delete=False)	#关闭后不删除
+
+ntf.name 
+
+ntf = NamedTemporaryFile(delete=False)
+
+
+--------------------------------------------------------------------------------------------
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
