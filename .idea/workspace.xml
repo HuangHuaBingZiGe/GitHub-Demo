@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0999ba-a1a6-4b95-a5bb-71aac49d5f1c" name="Default" comment="20180101">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/excel/csv_test.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/pingan2.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/pingan_copy.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/demo.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/txt/using_tips_3.txt" afterPath="$PROJECT_DIR$/docs/txt/using_tips_3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/using_tips/using_tips_2.py" afterPath="$PROJECT_DIR$/src/using_tips/using_tips_2.py" />
     </list>
     <ignored path="git_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -650,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514967354949</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="20180101">
+      <created>1514974894165</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1514974894165</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1048,9 +1048,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="249" column="3" selection-start-line="249" selection-start-column="3" selection-end-line="249" selection-end-column="3" />
-          <folding>
-            <element signature="e#42#51#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
