@@ -1,0 +1,68 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
+1、isinstance
+
+isinstance 函数可用于判断实例的类型，其实它的第二个参数可以是多个数据类型组成的元组。例如：
+
+isinstance(x, (int, float))
+等价于
+isinstance(x, int) or isinstance(x, float)
+
+
+类似的函数还有字符串的 startswith 方法和 endswith 方法，例如：s.startswith(('"""',"''''"))  等价于 s.startswith("'''") or s.startswith('"""')
+
+
+
+2、用 http.server 共享文件
+
+# python3
+python3 -m http.server
+
+# python2
+python -m SimpleHTTPServer
+
+效果如下图所示，通过浏览器方便局域网共享文件
+浏览器输入：localhost:8000
+
+
+
+3、zip 函数实现字典键值对互换
+
+>>> lang = {"python":".py", "java":".java"}
+
+>>> dict(zip(lang.values(), lang.keys()))
+{'.java': 'java', '.py': 'python'}
+
+
+
+4、查找列表中出现次数最多的数字
+
+[1, 2, 3, 4, 2, 2, 3, 1, 4, 4, 4, 5]
+>>> max(set(test), key=test.count)
+4
+
+
+
+5、使用 __slots__ 节省内存
+
+class MyClass(object):
+    def __init__(self, name, identifier):
+        self.name = name
+        self.identifier = identifier
+        self.set_up()
+
+print(sys.getsizeof(MyClass))
+>>> 1016
+
+class MyClass(object):
+    __slots__ = ['name', 'identifier']
+
+    def __init__(self, name, identifier):
+        self.name = name
+        self.identifier = identifier
+        self.set_up()
+
+print(sys.getsizeof(MyClass))
+>>> 888
