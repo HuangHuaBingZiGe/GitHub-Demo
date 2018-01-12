@@ -1,0 +1,107 @@
+1.vim常用命令
+
+普通模式下：
+	y 复制
+	p 粘贴
+	u 撤销
+
+
+
+
+2.bash-support的使用
+
+# 安装bash-support
+cd /usr/src
+w、
+mkdir ~/.vim
+cd ~/.vim
+unzip /usr/src/bash-support.zip
+
+# 打开插件开关
+vim ~/.vimrc
+filetype plugin on
+
+# 显示行号
+vim ~/.vimrc
+set number
+
+# 生成文件头
+vim ~/.vimrc
+let g:BASH_AuthorName = 'wuyuezhen'
+let g:BASH_Email = 'yuezhen_wu@163.com'
+let g:BASH_Company = 'Open Source Corporation'
+
+# 自定义表头
+vim ~/.vim/bash-support/templates/bash-file-header
+
+# 在正常模式下，生成函数
+vim test.sh
+\sfu 
+
+# 在正常模式下，生成函数备注
+\cfu
+
+
+# 在正常模式下，生成备注框架
+\cfr
+
+# 在正常模式下，快速生成case in esac语句
+\sc
+
+# 在正常模式下，快速生成elif then语句
+\sl
+
+# 在正常模式下，快速生成for in do done语句
+\sf
+
+# 在正常模式下，快速生成for do done语句
+\sfo
+
+# 在正常模式下，快速生成if then fi语句
+\si
+
+# 在正常模式下，快速生成if then else fi语句
+\sie
+
+# 在正常模式下，快速生成select in do done语句
+\ss
+
+# 在正常模式下，快速生成until do done语句
+\st
+
+# 在正常模式下，快速生成while do done语句
+\sw
+
+# 在正常模式下，快速生成echo -e "\n"语句
+\se
+
+# 在正常模式下，快速生成printf "%s\n"语句
+\sp
+
+# 在正常模式下，插入预定义代码块
+\nr
+
+# 在正常模式下，重命名预定义代码块
+\nw
+
+# 在正常模式下，编辑预定义代码块
+\ne
+
+# 在正常模式下，在光标的命令处获取Bash内建命令的快速帮助
+\hh
+
+# 添加BUG关键字注释
+\ckb
+
+# 添加TODO关键字注释
+\ckt
+
+# 添加Tricky关键字注释
+\ckr
+
+# 添加WARNING关键字注释
+\ckw
+
+
+
+

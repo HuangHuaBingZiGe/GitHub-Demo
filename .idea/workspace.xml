@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0999ba-a1a6-4b95-a5bb-71aac49d5f1c" name="Default" comment="20180108">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/using_tips/help.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/using_tips/output.xlsx" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bash_tips/bash_shell.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/standard_module/multiprocessing_module.py" afterPath="$PROJECT_DIR$/src/standard_module/multiprocessing_module.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/using_tips/using_tips_5.py" afterPath="$PROJECT_DIR$/src/using_tips/using_tips_5.py" />
     </list>
     <ignored path="git_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,6 +109,9 @@
         <option value="$PROJECT_DIR$/src/third_party_module/deal_with_database/pycharm_python3_oracle.py" />
         <option value="$PROJECT_DIR$/src/standard_module/multiprocessing_module.py" />
         <option value="$PROJECT_DIR$/src/using_tips/using_tips_5.py" />
+        <option value="$PROJECT_DIR$/bash/test.sh" />
+        <option value="$PROJECT_DIR$/test.sh" />
+        <option value="$PROJECT_DIR$/bash_src/test.sh" />
       </list>
     </option>
   </component>
@@ -152,8 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -172,12 +170,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="txt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bash_tips" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -185,57 +249,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\学习文档\python\GitHub-Demo\bash_tips" />
       <recent name="E:\学习文档\python\GitHub-Demo\src\third_party_module\deal_with_database" />
       <recent name="E:\学习文档\python\GitHub-Demo\src\third_party_module\deal_with_excel" />
       <recent name="E:\学习文档\python\GitHub-Demo\docs\txt" />
       <recent name="E:\学习文档\python\GitHub-Demo\src\third_party_module\upload_self_define_module" />
-      <recent name="E:\学习文档\python\GitHub-Demo\src\data_type" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\学习文档\python\GitHub-Demo\bash_src" />
       <recent name="E:\学习文档\python\GitHub-Demo\docs\txt" />
       <recent name="E:\学习文档\python\GitHub-Demo\docs\excel\using_tips" />
       <recent name="E:\学习文档\python\GitHub-Demo\docs" />
       <recent name="E:\学习文档\python\GitHub-Demo\docs\excel" />
-      <recent name="E:\学习文档\python\GitHub-Demo\src\standard_module" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.using_tips_5">
-    <configuration default="false" name="using_tips_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/using_tips" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="git_project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/using_tips/using_tips_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="xlrd&amp;xlwt" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/third_party_module/deal_with_excel" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="git_project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/third_party_module/deal_with_excel/xlrd&amp;xlwt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Bash.test.sh (2)">
     <configuration default="false" name="using_tips_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,6 +316,39 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/using_tips/using_tips_5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test.sh (1)" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="git_project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="test.sh (2)" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bash_src" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bash_src/test.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="git_project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -498,20 +559,32 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.using_tips_2" />
-      <item index="1" class="java.lang.String" itemvalue="Python.xlrd&amp;xlwt" />
-      <item index="2" class="java.lang.String" itemvalue="Python.using_tips_4" />
-      <item index="3" class="java.lang.String" itemvalue="Python.multiprocessing_module" />
-      <item index="4" class="java.lang.String" itemvalue="Python.using_tips_5" />
+    <configuration default="false" name="test.sh" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bash" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bash/test.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="git_project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Bash.test.sh" />
+      <item index="1" class="java.lang.String" itemvalue="Python.using_tips_4" />
+      <item index="2" class="java.lang.String" itemvalue="Python.multiprocessing_module" />
+      <item index="3" class="java.lang.String" itemvalue="Python.using_tips_5" />
+      <item index="4" class="java.lang.String" itemvalue="Bash.test.sh (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Bash.test.sh (2)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.using_tips_5" />
-        <item index="1" class="java.lang.String" itemvalue="Python.multiprocessing_module" />
-        <item index="2" class="java.lang.String" itemvalue="Python.using_tips_4" />
-        <item index="3" class="java.lang.String" itemvalue="Python.xlrd&amp;xlwt" />
-        <item index="4" class="java.lang.String" itemvalue="Python.using_tips_2" />
+        <item index="0" class="java.lang.String" itemvalue="Bash.test.sh (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Bash.test.sh (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.using_tips_5" />
+        <item index="3" class="java.lang.String" itemvalue="Python.multiprocessing_module" />
+        <item index="4" class="java.lang.String" itemvalue="Python.using_tips_4" />
       </list>
     </recent_temporary>
   </component>
@@ -739,7 +812,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515639143576</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="20180108">
+      <created>1515659877620</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1515659877620</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -755,24 +835,24 @@
     <frame x="-8" y="-8" width="1307" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30008045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25744167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49718422" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.640599" sideWeight="0.5028158" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49396622" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49718422" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.89850247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46127367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46422628" sideWeight="0.49718422" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46515396" sideWeight="0.49718422" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.89850247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49718422" order="6" side_tool="false" content_ui="tabs" />
@@ -785,7 +865,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49718422" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.89850247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46422628" sideWeight="0.49718422" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.65404475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24859211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -823,34 +903,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/built_in_functions/print_function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/keyword/yield.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/built_in_functions/__import__function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/built_in_functions/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1014,13 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11353">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="105" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4376">
@@ -1028,18 +1073,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1475">
-          <caret line="394" column="0" selection-start-line="394" selection-start-column="0" selection-end-line="409" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python35/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="850" column="8" selection-start-line="850" selection-start-column="8" selection-end-line="850" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,41 +1110,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_database/mysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_database/oracle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_excel/linux_pycharm_python3_mysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_database/mysql.py" />
+    <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_database/oracle.py" />
+    <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_excel/linux_pycharm_python3_mysql.py" />
     <entry file="file://$PROJECT_DIR$/src/third_party_module/deal_with_database/windows_pycharm_python3_mysql.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1515639142650" expanded="true" signature="164:185" ph="select host user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,7 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,9 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-          <folding>
-            <marker date="1515639142405" expanded="true" signature="525:548" ph="select * fro... v$version" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1134,7 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="435" column="84" selection-start-line="435" selection-start-column="4" selection-end-line="435" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="121" column="29" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,30 +1162,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="111" column="16" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/using_tips/help.txt">
+    <entry file="file://$PROJECT_DIR$/src/using_tips/help.txt" />
+    <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="245">
+          <caret line="1164" column="41" selection-start-line="1164" selection-start-column="41" selection-end-line="1164" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="106" column="3" selection-start-line="106" selection-start-column="3" selection-end-line="106" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/using_tips/self.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="350">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="408" column="20" selection-start-line="408" selection-start-column="20" selection-end-line="408" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bash/test.sh" />
+    <entry file="file://$PROJECT_DIR$/bash_src/test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bash_tips/bash_shell_command.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/using_tips/using_tips_5.py">
+    <entry file="file://$PROJECT_DIR$/bash_tips/bash_shell.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="1164" column="41" selection-start-line="1164" selection-start-column="41" selection-end-line="1164" selection-end-column="41" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
