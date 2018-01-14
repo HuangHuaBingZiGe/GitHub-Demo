@@ -1,6 +1,73 @@
 1.vim常用命令
 
 
+查看文件的字符
+cat -v a.sh
+
+
+多窗口功能：
+    :sp filename    打开一个新窗口，显示新文件，若只输入:sp，则两窗口显示同一个文件
+    Ctrl + w + j     光标移动到下方窗口
+    Ctrl + w + k     光标移动到上方窗口
+    Ctrl + w + q     离开当前窗口
+
+
+多文件编辑：
+    vim a.sh b.sh c.sh
+                    同时打开3个文件
+    :n              编辑下一个文件
+    :N              编辑上一个文件
+    :files          列出当前用vim打开的所有文件
+
+
+Dos与Linux的断行字符（文件转化）:
+
+    cat -v a.sh
+    unix2dos a.sh
+                    # dos2unix是将Windows格式文件转换为Unix、Linux格式的实用命令。Windows格式文件的换行符为\r\n ,而Unix&Linux文件的换行符为\n. dos2unix命令其实就是将文件中的\r\n 转换为\n
+    cat -v a.sh
+    dos2unix filename1 filename2 filename2
+                    # 一次转换多个文件
+    dos2unix -n dosfile linuxfile
+                    # 保留源文件，生成新文件
+    cat -v dosfile
+    cat -v linuxfile
+    ls -ltr dosfile
+    dos2unix dosfile
+    ls -ltr dosfile
+    dos2unix -k dosfile
+                    # 保留文件时间戳不变
+    ls -ltr dosfile
+    unix2dos -q dosfile
+                    # 静默模式格式化文件
+    unix2dos -k -n unixfile dosfile
+                    # 保留时间戳并且保留源文件
+
+
+语系编码转化：
+    locale  -a      # 查看本地字符集
+    locale  -m      # 查看所有支持的字符集
+    echo $LANG      # 查看系统语言
+    iconv --list    # 列出iconv支持的语系编码
+    iconv -f 原本编码 -t 新编码 filename [-o new file]
+                    -f：from，后接原本的编码格式
+                    -t：to，后接新编码格式
+                    -o file：可选参数，建立新文件
+    iconv -f GB2312 -t UTF8  a.txt -o b.txt
+                    将a.txt从GB2312格式转为UTF8格式，另存为b.txt文件，只能单向转换，转换为本地字符集（未验证，经过测试的推测！！！！！！）
+                    # 对于不支持中文字符集的：需要安装中文包，执行以下操作
+                    yum -y groupinstall chinese-support #安装所有与中文支持相关的包
+                    # 修改字符编码配置文件
+                    vi /etc/sysconfig/i18n
+                    # 修改后内容如下
+                    LANG="zh_CN.UTF-8"
+                    SUPPORTED="zh_CN:zh:en_US.UTF-8:en_US:en:zh_CN.GB18030"
+                    SYSFONT="latarcyrheb-sun16"
+                    # 最后重启服务器
+                    reboot
+
+
+
 4种模式：
     正常模式：(Normal-mode)（Esc）
     插入模式：(Insert-mode)（i、I、a、A、o）
@@ -10,6 +77,10 @@
 
 
 正常模式下：
+    .               重复上一次操作
+    R               替换
+    G               移动到文件的最后一行
+    J               删除：光标所在行行尾的换行符
     5G              跳到第5行行首
     5 + |           跳到第5列
     5 + Enter       向下移动5行
@@ -37,11 +108,14 @@
     y5y             复制：自光标开始的行及其以后的5行
     yw              复制：从当前光标到光标所在单词结尾的内容
     y0              复制：从当前光标到光标所在行首的内容
+    y1              复制：将光标处的1个字符复制到缓冲区
     y$              复制：从当前光标到光标所在行尾的内容
     u               撤销
     Ctrl + r        重做
-    Ctrl + b        屏幕向后翻一页
-    Ctrl + f        屏幕向前翻一页
+    Ctrl + b        屏幕向前翻一页
+    PgUp            屏幕向前翻一页
+    Ctrl + f        屏幕向后翻一页
+    PgDn            屏幕向后翻一页
     Ctrl + u        屏幕往后翻半页
     Ctrl + d        屏幕往前翻半页
     Ctrl + g        列出光标所在行的行号
@@ -58,8 +132,8 @@
     j               下移
     k               上移
     l               右移
-    r               替换：光标所处的字符
-    R               替换：光标所到之处的字符
+    r               替换：光标所处的字符，只替换一次
+    R               替换：光标所到之处的字符，替换直到按下ESC键为止
     x + p           将删除的一个字符后移一位
     cw              更改：光标所在的单词
     c3w             更改：光标所在及其后边的3个单词
@@ -75,18 +149,31 @@
     y'a             复制：标记为a的行
     '               移动到标记的行首
     `               移动到标记的光标位置
+    /word           查找：向下查找word的字符串
+    ?word           查找：向上查找word的字符串
+    n               查找：向上查找匹配到的
+    N               查找：向下查找匹配到的
 
 
 
 命令模式下：
+    :set fileencoding
+                    查看当前文件编码格式
+    :set fileencoding=utf-8
+                    设置当前文件编码格式为utf-8，也可以设置成其他编码格式
+    :set fileformat
+                    查看当前文件的断行格式（dos\windows,unix或macintosh）
+    :set fileformat=unix
+                    将当前文件的断行格式设置为unix格式
     :set list       显示回车符
     :q              退出
     :w              保存
     :w!             强制保存
-    :w file_name    另存为名为file_name的文件
+    :w a.txt        另存为名为a.txt的文件
     :q!             不保存退出
     :wq             保存退出
     :wq!            强制保存退出
+    :! command      暂时离开vi到命令行下执行一个命令后的显示结果
     ZZ              保存退出
     ZQ              保存退出
     :3              跳到第3行
@@ -103,12 +190,26 @@
     :14,16 co 20    复制：将14、15、16行复制到20行的位置
     :'a,'b co 'c    复制：将开始行使用ma标记，将结束行用mb标记，将想要粘贴到的位置用mc标记
     :'a,'b m 'c     剪贴：将开始行使用ma标记，将结束行用mb标记，将想要粘贴到的位置用mc标记
+    :1,$d           删除：第1行到最后一行
+    :2,5 d          删除：第2行到第5行
+    :2,5 de         删除：第2行到第5行
+    :s/V/B          替换：将当前行中的第一个V替换为B
+    :s/V/B/g        替换：将当前行中的所有V替换为B
+    :14,17s/V/B     替换：14行到17行，每一行的第一个V替换为B
+    :14,17s/V/B/g   替换：14行到17行，每一行的所有V替换为B
+    :1,$s/V/B/gc    替换：将第1行到最后一行的V替换为B，并且在替换之前提示用户确认是否替换
+    :%s/old/new/g   替换整个文件中的所有old
+    :%s/old/new/gc  替换整个文件中的所有old，但在每次出现时都提示
+
 
 
 插入模式下：
     i               进入插入模式，在光标的前面插入
+    I               进入插入模式：在光标的前面插入
     a               进入插入模式，在光标的后面插入
+    A               进入插入模式：在光标所在的行尾插入
     o               进入插入模式，在光标的下一行的行首插入
+    O               进入插入模式：在光标的上一行的行首插入
 
 
 
@@ -119,7 +220,8 @@
     gu              选中区域转为小写
     gU              选中区域转为大写
     g~              大小写互调
-    d               删除选中文本
+    d               删除：选中文本
+    y               复制：选中文件
     c               修改选中文本
     r               替换选中文本
     I               在选中文本前插入
@@ -145,6 +247,27 @@ filetype plugin on
 # 显示行号
 vim ~/.vimrc
 set number
+
+# 查找的字符串反白显示
+set hlsearch
+
+# 可随时用退格键进行删除
+set backspace=2
+
+# 自动缩排
+set autoindent
+
+# 在最下方一行显示状态
+set ruler
+
+# 在左下角显示模式
+set showmode
+
+# 显示不同的底色，还可以为light
+set bg=dark
+
+# 语法检验，颜色显示
+syntax on
 
 # 生成文件头
 vim ~/.vimrc
@@ -225,6 +348,47 @@ vim test.sh
 
 3.删除空行
 
-cat column.conf | sed '/^$/d'
+    # 将连续的多个空行合并成一个空行
+    cat -s column.conf
+
+    # 显示行号并统计非空白行
+    cat -b column.conf
+
+    # 显示行号并统计非空白行
+    nl column.conf
+
+    # 统计空白行
+    cat -b 和 cat -n 的差值
+
+    # 统计空白行
+    grep '^$' column.conf | wc -l
+
+    # 删除空白行
+    sed '/^$/d' column.conf
+
+    # 删除空白行
+    grep -v '^$' column.conf
+
+    # 删除空白行（巧妙利用了squeeze-repeats选项，上一行的换行符和空白行的换行符缩减为一个换行符，删除重复出现的\n字符）
+    cat column.conf | tr -s '\n'
+
+    # 删除空白行
+    awk '{if($0!="")print}' column.conf
+
+    # 删除空白行
+    awk '{if(length($0)!=0) print $0}' column.conf
+
+    # 删除空白行
+    awk '!/^$/ {print $0}' column.conf
+
+    # 删除空白行
+    awk 'length($0) > 0 {print $0}' column.conf
+
+    # 删除空白行
+    awk 'BEGIN{RS="\n+";ORS="\n"}{print}' column.conf
+
+    # 删除空白行
+    awk 'BEGIN{RS="\n+"}{print}' column,conf
+
 
 
