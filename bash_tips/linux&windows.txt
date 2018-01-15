@@ -11,16 +11,16 @@ shift + insert  粘贴
 
 
 #bash快捷键
-	ctrl+a		移到行首
-	ctrl+e		移到行尾
-	ctrl+w		删除光标前一个单词
-	ctrl+u		删除光标前所有字符
-	ctrl+l		清屏
-	ctrl+k		删除光标后所有字符	
-	ctrl+p		显示上一个输入的命令
-	ctrl+n		显示下一个输入的命令		
-	ctrl+r		根据关键词查找历史命令
-	cd -		快速切换两个目录
+    ctrl+a  移到行首
+    ctrl+e  移到行尾
+    ctrl+w  删除光标前一个单词
+    ctrl+u  删除光标前所有字符
+    ctrl+l  清屏
+    ctr +k  删除光标后所有字符
+    ctrl+p  显示上一个输入的命
+    ctrl+n  显示下一个输入的命令
+    ctrl+r  根据关键词查找历史命令
+    cd -    快速切换两个目录
 
 
 

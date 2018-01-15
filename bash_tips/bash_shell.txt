@@ -407,6 +407,8 @@ vim test.sh
 # 添加WARNING关键字注释
 \ckw
 
+
+
 3.删除空行
 
     # 将连续的多个空行合并成一个空行
@@ -425,7 +427,7 @@ vim test.sh
     grep '^$' column.conf | wc -l
 
     # 删除空白行
-    sed '/^$/d' column.conf
+    sed -i '/^$/d' column.conf
 
     # 删除空白行
     grep -v '^$' column.conf
@@ -453,3 +455,96 @@ vim test.sh
 
 
 
+4.对于Backspace不能用的处理
+    vim .bash_profile
+    stty erase ^H
+
+
+
+5.连接oracle数据库
+
+#!/bin/bash
+
+export ORACLE_HOME=/opt/oracle
+export LD_LIBRARY_PATH=/opt/oracle/lib
+export PATH=$JAVA_HOME/bin:$LD_LIBRARY_PATH:$PATH
+
+jdbc=xxx.xxx.xxx.xxx:1521/xxxx
+user=xxxx
+pass=xxxx
+
+oracle_sql=`sqlplus -S ${user}/${pass}@${jdbc} <<END
+set heading off
+set feedback off
+set pagesize 0
+set linesize 4000
+set verify off
+set echo off
+select distinct OWNER from all_all_tables;
+quit;
+END`
+
+echo ${oracle_sql} | sed 's/ /\n/g'
+
+
+
+5.连接mysql数据库
+
+#!/bin/bash
+
+user=xxxx
+pass=xxxx
+jdbc=xxxx.xxxx.xxxx.xxxx
+
+mysql_sql=`mysql -h${jdbc} -u${user} -p${pass} <<END
+SET SESSION group_concat_max_len = 102400;
+use xxxx;
+set names utf8;
+select count(*) from xxx;
+END`
+
+echo ${mysql_sql} | awk '{print $2}'
+
+
+
+6.except：自动登录和交互式通信
+
+#!/usr/bin/expect
+
+set timeout 30
+set prompt ":|#|\\\$"
+set dwm [lindex $argv 0]
+
+spawn ssh verup@xx.xxx.xxx.xxx
+expect "verup@xx.xx.xx.xxx's password:"
+send "verup\r"
+interact -o -nobuffer -re ${prompt}  return
+send "bash /home/verup/xxx.sh ${dwm}\r"
+expect eof
+exit
+
+
+
+7.远程传输
+scp -r version verup@xx.xx.xxx.xxx:/home/verup/
+
+
+
+8.后台调用脚本并打印日志
+nohup bash merge_data.sh 20180115 > 20180115.log 2>&1
+
+
+
+9.批量杀进程
+for i in `ps -ef | grep datax.py | awk '{print $2}'`;do kill $i;done
+
+
+
+10.datax查失败任务
+
+for i in `ls -ltr *.log|awk '{print $9}'` ;do cat $i|grep -E "任务启动时刻|任务结束时刻|Available jdbcUrl|任务总计耗时|任务平均流量|记录写入速度|读出记录总数|读写失败总数"|awk '{print $1"|"$2"|"$3"|"$4"|"}'|awk '{printf $0}'|awk -F "|" '{print $7" "$8"|"$1" "$2"|"$11" "$12"|"$15"|="$19"|"$23"|"$27"|"$31}'|sed -e 's/s//g;s/rec//g;s/\///g;s/KB//g;s/MB/*1024/g;s/B/\/1024/g'|awk '{print "'${i}'|"$0}'|grep "|||";done
+
+
+
+11.打包
+tar -zcvf test.tar.gz version
