@@ -3,7 +3,7 @@
 
 import string
 
-# python3 无stof和stoi方法
+# python3 无stof和stoi方法，python3标准库已删，用的不多
 
 # 将字符串转换成浮点型
 # print(string.atof('1.11'))
