@@ -251,3 +251,40 @@ from furniture import bench # 此为 absolute import
 ---------------------------------------------------------------------------------------------
 
 """
+
+"""
+Python3导入自定义模块的3种方式：
+
+    第1种：直接 import
+        
+        创建一个文件夹，此文件夹名称也就是模块名称
+        在父文件夹的同级创建一个main.py文件，写入要导入的模块
+        在父文件夹下创建一个__init__.py文件，定义自己的函数或类等
+        然后可以直接导入，使用 import 模块.变量|函数
+            
+            
+    第2种：通过sys模块导入自定义模块的path
+        如果执行文件和模块不在同一目录，这时候直接import是找不到自定义模块的
+            例如：
+                执行文件main.py在main目录下
+                pwcong模块在python目录下
+        导入sys模块
+        print(sys.path)
+        sys.path.append(path)
+        导入自定义模块
+        
+        # main.py
+        # -*- coding: utf-8 -*-
+        import sys
+        sys.path.append(r"C:\Desktop\python")
+        import pwcong
+        pwcong.hi()
+        
+        最后执行main.py文件，最终输出 hi ，第二种方式完成
+            
+            
+    第3种：通过pth文件找到自定义模块
+        
+        配置Python的环境变量地址
+        
+"""

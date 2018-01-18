@@ -39,3 +39,16 @@ os.path.dirname
 # send2trash.send2trash("E:\\test_123.txt")
 # send2trash.send2trash("E:\\test_123")
 # send2trash.send2trash("E:\\test_123\\")
+
+
+
+"""
+遍历一个未知的文件夹
+"""
+import os
+
+path = 'E:\票据\\'
+print("------------------------------------------------")
+for root, dirs, files in os.walk(path):
+    print("Root = ", root, "\n", "dirs = ", dirs, "\n""files = ", files)
+    print("--------------------------------------------")

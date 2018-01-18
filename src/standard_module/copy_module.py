@@ -203,3 +203,21 @@ for x, y in zip(a, c):
     浅拷贝和深拷贝的不同仅仅是对组合对象来说，所谓的组合对象就是包含了其它对象的对象，如列表，类实例。而对于数字、字符串以及其它“原子”类型，没有拷贝一说，产生的都是原对象的引用
 
 """
+
+"""
+指针的引用与赋值！！！！！！！！！！！！！！！！！！！！
+"""
+
+
+def extendList(val, list=[]):
+    list.append(val)
+    return list
+
+
+list1 = extendList(10)
+list2 = extendList(123, [])
+list3 = extendList('a')
+
+print("list1 = %s" % list1)
+print("list2 = %s" % list2)
+print("list3 = %s" % list3)
