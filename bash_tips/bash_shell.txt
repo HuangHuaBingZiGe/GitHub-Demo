@@ -261,6 +261,8 @@ Dos与Linux的断行字符（文件转化）:
     :1,$s/V/B/gc    替换：将第1行到最后一行的V替换为B，并且在替换之前提示用户确认是否替换
     :%s/old/new/g   替换整个文件中的所有old
     :%s/old/new/gc  替换整个文件中的所有old，但在每次出现时都提示
+    :set nohlsearch 搜索关键词高亮显示开启
+    :set hlsearch   搜索关键词高亮显示关闭
 
 
 
