@@ -74,6 +74,8 @@ print(member[1:3])
 print(member[:3])
 print(member[1:])
 print(member[:])
+print('----------------------------------')
+
 
 """
 列表的一些常用操作符：
@@ -83,3 +85,61 @@ print(member[:])
 ----重复操作符
 ----成员关系操作符
 """
+
+list1 = [123]
+list2 = [234]
+print(list1 > list2)
+
+list1 = [123, 456]
+list2 = [234, 123]
+print(list1 > list2)
+
+list3 = [123, 456]
+print((list1 < list2) and (list1 == list3))
+
+list4 = list1 + list2
+print(list4)
+
+print(list3 * 3)
+list3 *= 3
+print(list3)
+list3 *= 5
+print(list3)
+print('----------------------------------')
+
+print(123 in list3)
+print(123 not in list3)
+list5 = [123, ['小甲鱼', '牡丹'], 456]
+print('小甲鱼' in list5)
+print('小甲鱼' in list5[1])
+
+print(list5[1][1])
+print('----------------------------------')
+
+# 列表的小伙伴们
+print(dir(list))
+print(list3.count(123))  # 统计次数
+print(list3.index(123))  # 返回出现的位置
+print(list3.index(123, 3, 7))  # 从索引为3的位置到索引为7的位置搜索123
+print(id(list3))
+print(list3)
+print(list3.reverse())
+print(list3)
+print(id(list3))
+print('----------------------------------')
+
+list6 = [4, 2, 5, 1, 9, 23, 32, 0]
+list6.sort()
+print(list6)
+print('----------------------------------')
+
+list7 = list6[:]  # 真实的拷贝
+print(list7)
+print('----------------------------------')
+
+list8 = list6  # 增加指向
+print(list8)
+list6.sort()
+print(list6)
+print(list7)
+print(list8)
