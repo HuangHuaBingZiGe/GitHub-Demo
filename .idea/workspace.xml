@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0999ba-a1a6-4b95-a5bb-71aac49d5f1c" name="Default" comment="20180223">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python3_learn_video/BIF_closure.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="git_project.iws" />
@@ -583,13 +582,6 @@
       <option name="presentableId" value="Default" />
       <updated>1514369092755</updated>
     </task>
-    <task id="LOCAL-00002" summary="xiugai">
-      <created>1514371871730</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1514371871730</updated>
-    </task>
     <task id="LOCAL-00003" summary="20171227">
       <created>1514372209405</created>
       <option name="number" value="00003" />
@@ -926,7 +918,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519374528944</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="20180223">
+      <created>1519378404915</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1519378404915</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
