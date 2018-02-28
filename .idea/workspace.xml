@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e0999ba-a1a6-4b95-a5bb-71aac49d5f1c" name="Default" comment="20180228">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python3_learn_video/else_condition.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python3_learn_video/exception_try_except.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python3_learn_video/exception_try_except_finally.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python3_learn_video/os_module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/python3_learn_video/with_condition.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/python3_learn_video/pickle_module.py" afterPath="$PROJECT_DIR$/src/python3_learn_video/pickle_module.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/python3_learn_video/else_condition.py" afterPath="$PROJECT_DIR$/src/python3_learn_video/else_condition.py" />
     </list>
     <ignored path="git_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,6 +38,7 @@
     <SUITE FILE_PATH="coverage/GitHub-Demo$using_tips.coverage" NAME="using_tips Coverage Results" MODIFIED="1514543560468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python_using_tips" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$getattr_function.coverage" NAME="getattr_function Coverage Results" MODIFIED="1516174575750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/built_in_functions" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$function_procedure.coverage" NAME="function_procedure Coverage Results" MODIFIED="1519374310938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
+    <SUITE FILE_PATH="coverage/GitHub-Demo$else_condition.coverage" NAME="else_condition Coverage Results" MODIFIED="1519810820484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$BIF_closure.coverage" NAME="BIF_closure Coverage Results" MODIFIED="1519378366724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$if_condition5.coverage" NAME="if_condition5 Coverage Results" MODIFIED="1519264888102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$string_module.coverage" NAME="string_module Coverage Results" MODIFIED="1516175838058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/standard_module" />
@@ -52,6 +50,7 @@
     <SUITE FILE_PATH="coverage/GitHub-Demo$using_tips_2.coverage" NAME="using_tips_2 Coverage Results" MODIFIED="1514987913721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/using_tips" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$pickle_module.coverage" NAME="pickle_module Coverage Results" MODIFIED="1519801768780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$dict.coverage" NAME="dict Coverage Results" MODIFIED="1519636511922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
+    <SUITE FILE_PATH="coverage/GitHub-Demo$with_condition.coverage" NAME="with_condition Coverage Results" MODIFIED="1519811060388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python3_learn_video" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$if_condition.coverage" NAME="if_condition Coverage Results" MODIFIED="1517797027678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/conditional_statements" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$partial_function.coverage" NAME="partial_function Coverage Results" MODIFIED="1514541748533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/function_demo" />
     <SUITE FILE_PATH="coverage/GitHub-Demo$range_xrange__1_.coverage" NAME="range&amp;xrange (1) Coverage Results" MODIFIED="1514542223550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python_using_tips" />
@@ -100,18 +99,7 @@
     <favorites_list name="git_project" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="else_condition.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/python3_learn_video/else_condition.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/built_in_functions/__init__&amp;__new__&amp;__str__function.py" />
         <option value="$PROJECT_DIR$/src/built_in_functions/__metaclass__call__new__init__object&amp;type__function.py" />
         <option value="$PROJECT_DIR$/sql/mysql.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f10238b2-7612-4b41-aa3e-2b89cf473f72/console.sql" />
@@ -177,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/python3_learn_video/exception_module.py" />
         <option value="$PROJECT_DIR$/src/python3_learn_video/exception_try_except_finally.py" />
         <option value="$PROJECT_DIR$/src/python3_learn_video/else_condition.py" />
+        <option value="$PROJECT_DIR$/src/python3_learn_video/with_condition.py" />
       </list>
     </option>
   </component>
@@ -187,9 +175,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="width" value="1291" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1307" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -219,56 +208,7 @@
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GitHub-Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python3_learn_video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -296,43 +236,7 @@
       <recent name="E:\学习文档\python\GitHub-Demo\docs\txt" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.exception_try_except_finally">
-    <configuration default="false" name="pickle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/python3_learn_video" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="git_project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\学习文档\python\GitHub-Demo\src\python3_learn_video\pickle_module.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="pickle_module" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/python3_learn_video" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="git_project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/python3_learn_video/pickle_module.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.with_condition">
     <configuration default="false" name="weather_forecast" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -383,6 +287,42 @@
       <module name="git_project" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/python3_learn_video/exception_try_except_finally.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="else_condition" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/python3_learn_video" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="git_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/python3_learn_video/else_condition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="with_condition" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/python3_learn_video" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="git_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/python3_learn_video/with_condition.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -619,19 +559,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Bash.test.sh" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pickle" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pickle_module" />
-      <item index="3" class="java.lang.String" itemvalue="Python.weather_forecast" />
-      <item index="4" class="java.lang.String" itemvalue="Python.exception_module" />
-      <item index="5" class="java.lang.String" itemvalue="Python.exception_try_except_finally" />
+      <item index="1" class="java.lang.String" itemvalue="Python.weather_forecast" />
+      <item index="2" class="java.lang.String" itemvalue="Python.exception_module" />
+      <item index="3" class="java.lang.String" itemvalue="Python.exception_try_except_finally" />
+      <item index="4" class="java.lang.String" itemvalue="Python.else_condition" />
+      <item index="5" class="java.lang.String" itemvalue="Python.with_condition" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.exception_try_except_finally" />
-        <item index="1" class="java.lang.String" itemvalue="Python.exception_module" />
-        <item index="2" class="java.lang.String" itemvalue="Python.weather_forecast" />
-        <item index="3" class="java.lang.String" itemvalue="Python.pickle_module" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pickle" />
+        <item index="0" class="java.lang.String" itemvalue="Python.with_condition" />
+        <item index="1" class="java.lang.String" itemvalue="Python.else_condition" />
+        <item index="2" class="java.lang.String" itemvalue="Python.exception_try_except_finally" />
+        <item index="3" class="java.lang.String" itemvalue="Python.exception_module" />
+        <item index="4" class="java.lang.String" itemvalue="Python.weather_forecast" />
       </list>
     </recent_temporary>
   </component>
@@ -648,13 +588,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1514369092755</updated>
-    </task>
-    <task id="LOCAL-00008" summary="20171227">
-      <created>1514372970590</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1514372970590</updated>
     </task>
     <task id="LOCAL-00009" summary="20171227">
       <created>1514374080947</created>
@@ -992,7 +925,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519806581211</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="20180228">
+      <created>1519810206737</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1519810206737</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1010,8 +950,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="0" width="1291" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1307" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46471602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="434" y="75" width="423" height="617" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49718422" order="6" side_tool="false" content_ui="tabs" />
@@ -1020,7 +960,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32612312" sideWeight="0.49396622" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.49718422" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2828619" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27552673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4595525" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46422628" sideWeight="0.49718422" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1100,13 +1040,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/txt/python_interview_knowledge_point.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1331">
-          <caret line="479" column="0" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bbs_fishc_com/test_print.py" />
     <entry file="file://$PROJECT_DIR$/src/built_in_functions/README.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -1430,8 +1363,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/python3_learn_video/else_condition.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/python3_learn_video/with_condition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding />
         </state>
       </provider>
