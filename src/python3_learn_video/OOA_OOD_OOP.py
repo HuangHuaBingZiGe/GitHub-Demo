@@ -130,6 +130,8 @@ class Salmon(Fish):
 
 class Shark(Fish):
     def __init__(self):
+        # Fish.__init__(self) # 未绑定的父类方法
+        super().__init__()  # 继承父类的初始化方法
         self.hungry = True
     
     def eat(self):
@@ -149,10 +151,37 @@ print('--------------------------------------')
 shark = Shark()
 shark.eat()
 print('--------------------------------------')
-# shark.move() # 因为重写了父类的init方法，所以没有了x变量
+shark.move()  # 因为重写了父类的init方法，所以没有了x变量
+print('--------------------------------------')
 
 
 """
 --调用未绑定的父类方法
 --使用super函数
 """
+
+"""
+多重继承：
+class DerivedClassName(Base1,Base2,Base3):
+    ....
+"""
+
+
+class Base1:
+    def foo1(self):
+        print("我是foo1，我为Base1代言...")
+
+
+class Base2:
+    def foo2(self):
+        print("我是foo2，我为base2代言...")
+
+
+class C(Base1, Base2):
+    pass
+
+
+c = C()
+c.foo1()
+c.foo2()
+print('--------------------------------------')
