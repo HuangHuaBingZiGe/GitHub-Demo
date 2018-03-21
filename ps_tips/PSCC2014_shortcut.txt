@@ -1,0 +1,45 @@
+PS_CC_2014常用快捷键总结：
+
+Ctrl + B                设置色彩平衡
+Ctrl + D                取消选区
+Ctrl + E                合并图层
+Ctrl + J                复制图层
+Ctrl + K                设置首选项
+Ctrl + L                设置色阶
+Ctrl + N                新建文件
+Ctrl + O                打开文件
+Ctrl + R                切换辅助线
+Ctrl + S                保存文件
+Ctrl + U                设置色相、饱和度
+Ctrl + Z                后退1步
+
+Ctrl + -                缩小图片
+Ctrl + +                放大图片
+Ctrl + Enter            变为选区
+Ctrl + Del              使用背景颜色填色
+
+Ctrl + Alt + C          设置画布大小
+Ctrl + Alt + I          设置图像大小
+Ctrl + Alt + Z          后退，默认最多后退20步
+
+Ctrl + Shift + I        反选
+
+Alt + Shift + Del       使用前景色填色
+
+Alt + Up                复制一个图层并上移
+Alt + Down              复制一个图层并下移
+Alt + Right             复制一个图层并右移
+Alt + Left              复制一个图层并左移
+
+Alt + Del               使用前景颜色填色
+Alt + 选区              增加选区
+
+Shift + 选区            增加选区
+
+[                       放大笔刷
+]                       缩小笔刷
+
+V                       移动工具
+
+空格 + 鼠标左键         移动
+
